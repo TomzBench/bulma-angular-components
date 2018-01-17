@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
+# QuickStart
+
+ng new my-app --style=scss
+cd my-app
+npm install "file:path/to/bulma-angular-components"
+npm install bulma
+Add @import '~bulma/bulma' to src/styles/styles.scss
+Add @import your font icon package (IE @import '~font-awesome/css/font-awesome.min.css')
+(Note if font-awesome is not your default icons, TODO configure icon-pack)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

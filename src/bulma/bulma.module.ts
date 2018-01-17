@@ -15,11 +15,16 @@ import {
     BulmaFieldComponent,
     BulmaFieldHorizontalComponent,
     BulmaInputComponent,
+    BulmaInputDirective
   ],
   exports: [
     BulmaFieldComponent,
+    BulmaInputDirective
+  ],
+  entryComponents: [
+    BulmaFieldComponent,
     BulmaFieldHorizontalComponent,
-    BulmaInputComponent,
+    BulmaInputComponent
   ]
 })
 export class BulmaModule {}
