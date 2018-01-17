@@ -10,7 +10,8 @@
   <input b-input
          [icon]="'envelope'"
 	 [iconRight]="'check'"
-	 [loading]="false">
+	 [class]="'danger'"
+	 [help]="'Invalid!'">
 </div>
 ```
 

@@ -10,7 +10,9 @@ import { BulmaBaseContext } from '../base';
 
 @Component({
   template: `
-  <label *ngIf="data.label" class="label" [ngClass]="'is-'+data.size">{{data.label}}</label>
+  <label *ngIf="data.label" class="label {{data.size&&'is-'+data.size}}">
+    {{data.label}}
+  </label>
   <div class="{{'control '+(data.size&&'is-'+data.size)}}" 
        [ngClass]="
                  {'is-loading':data.loading,
