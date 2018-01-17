@@ -21,12 +21,12 @@
   <div b-field="User"
     [horizontal]="true">
     <input b-input
+      [size]="'large'"
       [icon]="'user'"
       [iconRight]="'check'"
-      [loading]="false">
-  </div>
-  <div b-field="Email"
-    [horizontal]="true">
+      [loading]="false"
+      [help]="'Your name is spelled wrong'"
+      [class]="'danger'">
     <input b-input
       [icon]="'envelope'"
       [iconRight]="'check'"

@@ -34,11 +34,23 @@ export class BulmaInputDirective extends BulmaBaseContext implements OnInit {
   /** IE: [loading]="true" (default: false) */
   @Input() loading: boolean;
 
+  /** IE [help]="'This email is invalid'" **/
+  @Input() help: string;
+
+  /** IE [class]="'danger'" **/
+  @Input() class: string;
+
+  /** IE [class]="'small|medium|large'" **/
+  @Input() size: string;
+
+  /** Add is-{small|large|success|etc} class for caller */
+  @HostBinding("class") hasClass =
+    "input " +
+    "is-" + this.class + " " +
+    "is-" + this.size;
+
   /** Internal use, set by the parent b-field component */
   label: string;
-
-  /** We add the bulma class to callers input element for them */
-  @HostBinding("class.input") class: boolean = true;
 
   /** Pass the component type and the calllers element to base class 
    * (used for dynamic rendering) */
