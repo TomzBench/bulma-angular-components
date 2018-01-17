@@ -38,13 +38,18 @@ export class BulmaInputDirective extends BulmaBaseContext implements OnInit {
   @Input() help: string;
 
   /** IE [class]="'danger'" **/
-  @Input() class: string = "normal";
+  @Input() class: string;
 
   /** IE [class]="'extra smallsmall|large'" **/
-  @Input() size: string = "normal";
+  @Input() size: string;
 
   /** We add the bulma class to callers input element for them */
   @HostBinding("class.input") hasClass: boolean = true;
+  @HostBinding("class.is-small") small: boolean;
+  @HostBinding("class.is-medium") medium: boolean;
+  @HostBinding("class.is-large") large: boolean;
+  @HostBinding("class.is-success") success: boolean;
+  @HostBinding("class.is-danger") danger: boolean;
 
   /** Internal use, set by the parent b-field component */
   label: string;
@@ -55,5 +60,8 @@ export class BulmaInputDirective extends BulmaBaseContext implements OnInit {
     super(BulmaInputComponent, el);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.size) this[this.size] = true;
+    if (this.class) this[this.class] = true;
+  }
 }

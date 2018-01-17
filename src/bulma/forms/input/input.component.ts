@@ -10,11 +10,12 @@ import { BulmaBaseContext } from '../base';
 
 @Component({
   template: `
-  <label *ngIf="data.label" class="label">{{data.label}}</label>
-  <div class="control" [ngClass]="
-                       {'is-loading':data.loading,
-                        'has-icons-left':!!data.icon,
-                        'has-icons-right':data.loading||!!data.iconRight}">
+  <label *ngIf="data.label" class="label" [ngClass]="'is-'+data.size">{{data.label}}</label>
+  <div class="{{'control '+(data.size&&'is-'+data.size)}}" 
+       [ngClass]="
+                 {'is-loading':data.loading,
+                  'has-icons-left':!!data.icon,
+                  'has-icons-right':data.loading||!!data.iconRight}">
     <ng-content></ng-content>
     <span [ngClass]="'is-'+data.size" *ngIf="!!data.icon" class="icon is-left">
       <i class="fa fa-{{data.icon}}"></i>
@@ -29,6 +30,7 @@ import { BulmaBaseContext } from '../base';
 })
 export class BulmaInputComponent implements OnInit, AfterViewInit {
 
+  // TODO extend to use an icon directive to manage icon package types and size
   @HostBinding("class.field") hasField: boolean = true;
   @ContentChild(BulmaBaseContext) input: BulmaBaseContext;
   constructor() {}
