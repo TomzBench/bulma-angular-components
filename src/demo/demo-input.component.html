@@ -1,0 +1,35 @@
+<!-- Regular -->
+<div class="column is-6">
+  <p>stacked regular</p>
+  <div b-field="Name">
+    <input b-input
+      [icon]="'user'"
+      [iconRight]="'check'"
+      [loading]="false">
+  </div>
+  <div b-field="Email">
+    <input b-input
+      [icon]="'envelope'"
+      [iconRight]="'check'"
+      [loading]="true">
+  </div>
+</div>
+
+<!-- Horizontal -->
+<div class="column is-6">
+  <p>stacked horizontal</p>
+  <div b-field="User"
+    [horizontal]="true">
+    <input b-input
+      [icon]="'user'"
+      [iconRight]="'check'"
+      [loading]="false">
+  </div>
+  <div b-field="Email"
+    [horizontal]="true">
+    <input b-input
+      [icon]="'envelope'"
+      [iconRight]="'check'"
+      [loading]="false">
+  </div>
+</div>

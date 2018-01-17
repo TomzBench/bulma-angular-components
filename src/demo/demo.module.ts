@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { BulmaModule } from '../bulma/bulma.module'
 
 
-import { DemoComponent } from './demo.component';
+import {
+  DemoComponent,
+  DemoInputComponent
+} from './';
 
 
 @NgModule({

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'b-root',
-  templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.css']
+  selector: 'demo-root',
+  templateUrl: './demo.component.html'
 })
 export class DemoComponent {
   title = 'b';
