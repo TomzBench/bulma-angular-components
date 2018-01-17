@@ -38,16 +38,13 @@ export class BulmaInputDirective extends BulmaBaseContext implements OnInit {
   @Input() help: string;
 
   /** IE [class]="'danger'" **/
-  @Input() class: string;
+  @Input() class: string = "normal";
 
-  /** IE [class]="'small|medium|large'" **/
-  @Input() size: string;
+  /** IE [class]="'extra smallsmall|large'" **/
+  @Input() size: string = "normal";
 
-  /** Add is-{small|large|success|etc} class for caller */
-  @HostBinding("class") hasClass =
-    "input " +
-    "is-" + this.class + " " +
-    "is-" + this.size;
+  /** We add the bulma class to callers input element for them */
+  @HostBinding("class.input") hasClass: boolean = true;
 
   /** Internal use, set by the parent b-field component */
   label: string;
