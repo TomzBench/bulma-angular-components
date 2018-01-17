@@ -33,7 +33,7 @@
 <!-- Horizontal -->
 <div class="column is-6">
   <h2 class="title">stacked horizontal</h2>
-  <div b-field="User"
+  <div b-field="Name"
     [horizontal]="true">
     <input b-input
       [class]="'danger'"
@@ -45,5 +45,11 @@
       [icon]="'envelope'"
       [iconRight]="'check'"
       [loading]="false">
+  </div>
+  <div b-field="Location"
+    [horizontal]="true">
+    <input b-input
+      [icon]="'globe'"
+      [iconRight]="'check'">
   </div>
 </div>
