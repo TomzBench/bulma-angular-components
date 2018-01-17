@@ -11,7 +11,8 @@ import {
 
 @NgModule({
   declarations: [
-    DemoComponent
+    DemoComponent,
+    DemoInputComponent
   ],
   imports: [
     BrowserModule,
