@@ -15,17 +15,22 @@ import {
   AfterContentInit
 } from '@angular/core';
 
-import { BulmaTabsItemDirective } from './tabs-item.directive';
-import { BulmaTabsItemComponent } from './tabs-item.component';
+import {
+  BulmaTabsItemListComponent,
+  BulmaTabsItemViewComponent
+} from './tabs-item.component';
 import { BulmaTabsActiveContext } from './tabs-active.class';
 
 @Component({
   selector: '[b-tabs]',
   template: `
-  <ul>
-    <ng-template #list>
-    </ng-template>
-  </ul>
+  <div class="tabs">
+    <ul>
+      <ng-template #list>
+      </ng-template>
+    </ul>
+  </div>
+  <ng-content></ng-content>
   `
 })
 export class BulmaTabsComponent implements OnInit, AfterContentInit {
@@ -43,28 +48,31 @@ export class BulmaTabsComponent implements OnInit, AfterContentInit {
   @Input() active: string;
   @Output() activeChange: EventEmitter < string > ;
 
-  @HostBinding('class.tabs') hasTabs: boolean = true;
-  @ContentChildren(BulmaTabsItemDirective) tabs: QueryList < BulmaTabsItemDirective > ;
-  @ViewChild("list", { read: ViewContainerRef }) container: ViewContainerRef;
-  factory: ComponentFactory < BulmaTabsItemComponent > ;
+  @ContentChildren(BulmaTabsItemViewComponent) viewQuery: QueryList < BulmaTabsItemViewComponent > ;
+  @ViewChild("list", { read: ViewContainerRef }) tabsList: ViewContainerRef;
+  listFactory: ComponentFactory < BulmaTabsItemListComponent > ;
+  viewFactory: ComponentFactory < BulmaTabsItemViewComponent > ;
   activeTab: BulmaTabsActiveContext = new BulmaTabsActiveContext();
+  tabs: BulmaTabsItemViewComponent[];
 
   constructor(private _resolver: ComponentFactoryResolver) {
-    this.factory = _resolver.resolveComponentFactory(BulmaTabsItemComponent);
+    this.listFactory = _resolver.resolveComponentFactory(BulmaTabsItemListComponent);
+    this.viewFactory = _resolver.resolveComponentFactory(BulmaTabsItemViewComponent);
     this.activeChange = new EventEmitter < string > ();
   }
   ngOnInit() {}
 
   ngAfterContentInit() {
-    this.activeTab.label = this.active || this.tabs.toArray()[0].label;
-    this.tabs.forEach((tab: BulmaTabsItemDirective) => {
-      let ref = this.container.createComponent(this.factory);
-      ref.instance.data = tab;
+    this.tabs = this.viewQuery.toArray();
+    this.activeTab.label = this.active || this.tabs[0].label;
+    this.viewQuery.forEach((tab: BulmaTabsItemViewComponent) => {
+      let listRef = this.tabsList.createComponent(this.listFactory);
+      listRef.instance.data = tab;
+      tab.active = this.activeTab;
       tab.tabClick.subscribe((label: string) => {
         this.activeTab.label = label;
         this.activeChange.emit(label);
       })
-      tab.active = this.activeTab;
     });
   }
 

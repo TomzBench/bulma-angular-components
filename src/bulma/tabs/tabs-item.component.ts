@@ -1,11 +1,15 @@
 import {
   Component,
   Input,
+  Output,
+  EventEmitter,
   OnInit
 } from '@angular/core';
 
-import { BulmaTabsItemDirective } from './tabs-item.directive';
+import { BulmaTabsActiveContext } from './tabs-active.class';
 
+/**
+ */
 @Component({
   template: `
   <li [ngClass]="{'is-active':data.active.label===data.label}">
@@ -18,12 +22,32 @@ import { BulmaTabsItemDirective } from './tabs-item.directive';
   </li>
   `
 })
+export class BulmaTabsItemListComponent implements OnInit {
 
-export class BulmaTabsItemComponent implements OnInit {
-
-  data: BulmaTabsItemDirective;
+  data: BulmaTabsItemViewComponent;
 
   constructor() {}
+  ngOnInit() {}
+
+}
+
+/**
+ */
+@Component({
+  selector: '[b-tabs-item]',
+  template: `
+  <ng-content *ngIf="active.label===label">
+  </ng-content>
+  `
+})
+export class BulmaTabsItemViewComponent implements OnInit {
+
+  @Input('b-tabs-item') label: string;
+  @Input() icon: string;
+  @Output() tabClick: EventEmitter < string > ;
+  active: BulmaTabsActiveContext;
+  whenClicked(): void { this.tabClick.emit(this.label); }
+  constructor() { this.tabClick = new EventEmitter < string > (); }
   ngOnInit() {}
 
 }
