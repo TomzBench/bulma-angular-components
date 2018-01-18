@@ -1,0 +1,29 @@
+<div class="column is-6">
+  <div b-field="name">
+    <select b-select>
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
+
+<div class="column is-6">
+  <div b-field="name">
+    <select b-select
+      [loading]="true"
+      [help]="'nice!'"
+      [icon]="'globe'"
+      [class]="'success'">
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
+
+<div class="column is-6">
+  <div b-field="name">
+    <select b-select
+      [size]="'large'"
+      [class]="'danger'">
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
