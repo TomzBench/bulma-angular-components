@@ -30,6 +30,21 @@
 </div>
 ```
 
+# Usage Tabs
+```
+<div b-tabs>
+  <div b-tabs-item="Status">
+    <app-status></app-status>
+  </div>
+  <div b-tabs-item="Network">
+    <app-network></app-network>
+  </div>
+  <div b-tabs-item="Hardware">
+    <app-hardware></app-hardware>
+  </div>
+</div>
+```
+
 # QuickStart (Use external app)
 
 ng new my-app --style=scss
