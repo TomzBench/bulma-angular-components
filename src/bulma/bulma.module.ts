@@ -6,7 +6,9 @@ import {
   BulmaInputComponent,
   BulmaInputDirective,
   BulmaTextareaComponent,
-  BulmaTextareaDirective
+  BulmaTextareaDirective,
+  BulmaSelectComponent,
+  BulmaSelectDirective
 } from './forms';
 
 import {
@@ -28,12 +30,15 @@ import {
     BulmaTabsItemViewComponent,
     BulmaTabsItemListComponent,
     BulmaTextareaComponent,
-    BulmaTextareaDirective
+    BulmaTextareaDirective,
+    BulmaSelectComponent,
+    BulmaSelectDirective
   ],
   exports: [
     BulmaFieldComponent,
     BulmaInputDirective,
     BulmaTextareaDirective,
+    BulmaSelectDirective,
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
     BulmaTabsItemListComponent
