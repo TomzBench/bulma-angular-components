@@ -16,6 +16,7 @@ import {
 
 import { BulmaTabsItemDirective } from './tabs-item.directive';
 import { BulmaTabsItemComponent } from './tabs-item.component';
+import { BulmaTabsActiveContext } from './tabs-active.class';
 
 @Component({
   selector: '[b-tabs]',
@@ -38,12 +39,13 @@ export class BulmaTabsComponent implements OnInit, AfterContentInit {
   @Input() size: boolean;
 
   /** IE: [active]="active" **/
-  @Input() active: string = 'hi';
+  @Input() active: string;
 
   @HostBinding('class.tabs') hasTabs: boolean = true;
   @ContentChildren(BulmaTabsItemDirective) tabs;
   @ViewChild("list", { read: ViewContainerRef }) container: ViewContainerRef;
   factory: ComponentFactory < BulmaTabsItemComponent > ;
+  activeTab: BulmaTabsActiveContext = new BulmaTabsActiveContext();
 
   constructor(private _resolver: ComponentFactoryResolver) {
     this.factory = _resolver.resolveComponentFactory(BulmaTabsItemComponent);
@@ -55,10 +57,9 @@ export class BulmaTabsComponent implements OnInit, AfterContentInit {
       let ref = this.container.createComponent(this.factory);
       ref.instance.data = tab;
       tab.tabClick.subscribe((label: string) => {
-        this.active = label;
-        console.log(this.active);
+        this.activeTab.label = label;
       })
-      tab.active = this.active;
+      tab.active = this.activeTab;
     });
   }
 
