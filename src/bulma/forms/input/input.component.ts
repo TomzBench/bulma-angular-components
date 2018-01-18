@@ -34,7 +34,6 @@ export class BulmaInputComponent implements OnInit, AfterViewInit {
 
   // TODO extend to use an icon directive to manage icon package types and size
   @HostBinding("class.field") hasField: boolean = true;
-  @ContentChild(BulmaBaseContext) input: BulmaBaseContext;
   constructor() {}
 
   ngOnInit() {}

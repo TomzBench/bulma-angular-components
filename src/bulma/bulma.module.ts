@@ -5,7 +5,6 @@ import {
   BulmaFieldHorizontalComponent,
   BulmaInputComponent,
   BulmaInputDirective,
-  BulmaTextareaComponent
 } from './forms';
 
 import {
