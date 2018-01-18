@@ -26,19 +26,26 @@
   <div class="container">
     <div class="columns">
       <div class="column is-12">
-        <div b-tabs>
+        <div b-tabs
+          [size]="'large'"
+          [active]="'inputs'">
+          <div b-tabs-item="textarea"
+            [icon]="'book'">
+          </div>
+          <div b-tabs-item="select"
+            [icon]="'arrow-down'">
+          </div>
           <div b-tabs-item="inputs"
             [icon]="'user'">
           </div>
-          <div b-tabs-item="textarea">
+          <div b-tabs-item="checkbox"
+            [icon]="'check'">
           </div>
-          <div b-tabs-item="select">
+          <div b-tabs-item="radio"
+            [icon]="'music'">
           </div>
-          <div b-tabs-item="checkbox">
-          </div>
-          <div b-tabs-item="radio">
-          </div>
-          <div b-tabs-item="file">
+          <div b-tabs-item="file"
+            [icon]="'file'">
           </div>
         </div>
       </div>
