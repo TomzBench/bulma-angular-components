@@ -1,19 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Directive,
+  Input,
+  Output,
+  EventEmitter,
+  ContentChildren,
+  HostBinding,
+  OnInit,
+  AfterContentInit
+} from '@angular/core';
 
-@Component({
-  selector: 'b-tabs',
-  template: `
-    <p>
-      tabs works!
-    </p>
-  `,
-  styles: []
+import { BulmaTabsItemDirective } from './tabs-item.component';
+
+@Directive({
+  selector: 'b-tabs'
 })
-export class TabsComponent implements OnInit {
+export class BulmaTabsDirective implements OnInit, AfterContentInit {
 
-  constructor() { }
+  @Input() active;
+  @Output() activeChange: EventEmitter < BulmaTabsItemDirective > ;
 
-  ngOnInit() {
+  @ContentChildren(BulmaTabsItemDirective) tabs;
+  constructor() {}
+  ngOnInit() {}
+  ngAfterContentInit() {
+    console.log(this.tabs);
   }
 
 }

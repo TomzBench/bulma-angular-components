@@ -7,6 +7,11 @@ import {
   BulmaInputDirective
 } from './forms';
 
+import {
+  BulmaTabsDirective,
+  BulmaTabsItemDirective
+} from './tabs';
+
 @NgModule({
   imports: [
     CommonModule
