@@ -1,45 +1,50 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <section>
-  <div class="hero">
-    <div class="hero-head">
-      <div class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <div class="navbar-item">
-              <span class="icon icon-large"><i class="fa fa-gift fa-2x"></i></span>
-              <span style="padding-left:10px">Demo</span>
-            </div>
-          </div>
-          <div class="navbar-burger burger"
-            (click)="burger=!burger"
-            [ngClass]="{'is-active':burger}">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div clas="navbar-menu">
-            <div class="navbar-start">
-            </div>
-            <div class="navbar-end">
-            </div>
-          </div>
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <span class="icon icon-large"><i class="fa fa-gift fa-2x"></i></span>
+          <span style="padding-left:10px">Demo</span>
         </div>
       </div>
-    </div>
-    <div class="hero-body">
-      <div class="container">
-
-        <div class="columns">
-          <div class="column is-12">
-            <h1 class="title">Inputs</h1>
-            <demo-input></demo-input>
-          </div>
-        </div>
-
+      <div class="navbar-burger burger"
+        (click)="burger=!burger"
+        [ngClass]="{'is-active':burger}">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
-
-    <div class="hero-foot">
+      <div clas="navbar-menu">
+        <div class="navbar-start">
+        </div>
+        <div class="navbar-end">
+        </div>
+      </div>
     </div>
   </div>
+  <div class="container">
+    <div b-tabs>
+      <div b-tabs-item="inputs">
+      </div>
+      <div b-tabs-item="textarea">
+      </div>
+      <div b-tabs-item="select">
+      </div>
+      <div b-tabs-item="checkbox">
+      </div>
+      <div b-tabs-item="radio">
+      </div>
+      <div b-tabs-item="file">
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-12">
+        <demo-input></demo-input>
+      </div>
+    </div>
+
+  </div>
+
 </section>

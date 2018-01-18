@@ -8,7 +8,7 @@ import {
 } from './forms';
 
 import {
-  BulmaTabsDirective,
+  BulmaTabsComponent,
   BulmaTabsItemDirective
 } from './tabs';
 
@@ -20,11 +20,15 @@ import {
     BulmaFieldComponent,
     BulmaFieldHorizontalComponent,
     BulmaInputComponent,
-    BulmaInputDirective
+    BulmaInputDirective,
+    BulmaTabsComponent,
+    BulmaTabsItemDirective
   ],
   exports: [
     BulmaFieldComponent,
-    BulmaInputDirective
+    BulmaInputDirective,
+    BulmaTabsComponent,
+    BulmaTabsItemDirective
   ],
   entryComponents: [
     BulmaFieldComponent,
