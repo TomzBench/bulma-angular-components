@@ -4,47 +4,62 @@ import {
   Output,
   EventEmitter,
   ContentChildren,
+  ViewChild,
+  ViewContainerRef,
+  ComponentRef,
+  ComponentFactory,
+  ComponentFactoryResolver,
   HostBinding,
   OnInit,
   AfterContentInit
 } from '@angular/core';
 
-import { BulmaTabsItemDirective } from './tabs-item.component';
+import { BulmaTabsItemDirective } from './tabs-item.directive';
+import { BulmaTabsItemComponent } from './tabs-item.component';
 
 @Component({
   selector: '[b-tabs]',
   template: `
   <ul>
-    <li *ngFor="let tab of tabs"
-        [ngClass]="{'is-active':tab.active}">
-      <a>
-        <span *ngIf="tab.icon" class="icon"><i class="fa fa-{{icon}}"></i></span>
-	<span>{{tab.label}}</span>
-      </a>
-    </li>
+    <ng-template #list>
+    </ng-template>
   </ul>
-  <ng-template>
-   <ng-content></ng-content>
-  </ng-template>
   `
 })
 export class BulmaTabsComponent implements OnInit, AfterContentInit {
 
-  /** 
-   * Boxed(is-boxed)
-   * Alignment(is-left,is-right,is-center)
-   * size(is-small,is-medium,is-large)
-   **/
-  @Input() active;
-  @Output() activeChange: EventEmitter < BulmaTabsItemDirective > ;
+  /** IE [box]="true" **/
+  @Input() box: boolean;
+
+  /** IE: [align]="'center|left|right'" **/
+  @Input() align: string;
+
+  /** IE: [size]="'small|medium|large'" **/
+  @Input() size: boolean;
+
+  /** IE: [active]="active" **/
+  @Input() active: string = 'hi';
 
   @HostBinding('class.tabs') hasTabs: boolean = true;
-
   @ContentChildren(BulmaTabsItemDirective) tabs;
-  constructor() {}
+  @ViewChild("list", { read: ViewContainerRef }) container: ViewContainerRef;
+  factory: ComponentFactory < BulmaTabsItemComponent > ;
+
+  constructor(private _resolver: ComponentFactoryResolver) {
+    this.factory = _resolver.resolveComponentFactory(BulmaTabsItemComponent);
+  }
   ngOnInit() {}
+
   ngAfterContentInit() {
-    console.log(this.tabs);
+    this.tabs.forEach((tab: BulmaTabsItemDirective) => {
+      let ref = this.container.createComponent(this.factory);
+      ref.instance.data = tab;
+      tab.tabClick.subscribe((label: string) => {
+        this.active = label;
+        console.log(this.active);
+      })
+      tab.active = this.active;
+    });
   }
 
 }

@@ -9,7 +9,8 @@ import {
 
 import {
   BulmaTabsComponent,
-  BulmaTabsItemDirective
+  BulmaTabsItemDirective,
+  BulmaTabsItemComponent
 } from './tabs';
 
 @NgModule({
@@ -22,18 +23,21 @@ import {
     BulmaInputComponent,
     BulmaInputDirective,
     BulmaTabsComponent,
-    BulmaTabsItemDirective
+    BulmaTabsItemDirective,
+    BulmaTabsItemComponent
   ],
   exports: [
     BulmaFieldComponent,
     BulmaInputDirective,
     BulmaTabsComponent,
-    BulmaTabsItemDirective
+    BulmaTabsItemDirective,
+    BulmaTabsItemComponent
   ],
   entryComponents: [
     BulmaFieldComponent,
     BulmaFieldHorizontalComponent,
-    BulmaInputComponent
+    BulmaInputComponent,
+    BulmaTabsItemComponent
   ]
 })
 export class BulmaModule {}

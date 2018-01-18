@@ -1,16 +1,27 @@
 import {
-  Directive,
+  Component,
   Input,
   OnInit
 } from '@angular/core';
 
-@Directive({
-  selector: '[b-tabs-item]'
-})
-export class BulmaTabsItemDirective implements OnInit {
+import { BulmaTabsItemDirective } from './tabs-item.directive';
 
-  @Input('b-tabs-item') label: string;
-  @Input() icon: string;
+@Component({
+  template: `
+  <li [ngClass]="{'is-active':data.active===data.label}">
+    <a (click)="data.whenClicked()">
+      <span *ngIf="data.icon" class="icon">
+        <i class="fa fa-{{data.icon}}"></i>
+      </span>
+      <span>{{data.label}} {{data.active}}</span>
+    </a>
+  </li>
+  `
+})
+
+export class BulmaTabsItemComponent implements OnInit {
+
+  data: BulmaTabsItemDirective;
 
   constructor() {}
   ngOnInit() {}
