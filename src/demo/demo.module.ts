@@ -5,14 +5,16 @@ import { BulmaModule } from '../bulma/bulma.module'
 
 import {
   DemoComponent,
-  DemoInputComponent
+  DemoInputComponent,
+  DemoTabsComponent
 } from './';
 
 
 @NgModule({
   declarations: [
     DemoComponent,
-    DemoInputComponent
+    DemoInputComponent,
+    DemoTabsComponent
   ],
   imports: [
     BrowserModule,

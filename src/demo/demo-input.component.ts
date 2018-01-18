@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './demo-input.component.html',
   styleUrls: []
 })
-export class DemoInputComponent {
-  title = 'b';
-}
+export class DemoInputComponent {}

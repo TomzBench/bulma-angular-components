@@ -24,7 +24,9 @@ import { BulmaTabsActiveContext } from './tabs-active.class';
 @Component({
   selector: '[b-tabs]',
   template: `
-  <div class="tabs">
+  <div class="tabs 
+    {{alignment&&'is-'+alignment}}
+    {{size&&'is-'+size}}">
     <ul>
       <ng-template #list>
       </ng-template>
@@ -38,8 +40,8 @@ export class BulmaTabsComponent implements OnInit, AfterContentInit {
   /** IE [box]="true" **/
   @Input() box: boolean;
 
-  /** IE: [align]="'center|left|right'" **/
-  @Input() align: string;
+  /** IE: [alignment]="'center|left|right'" **/
+  @Input() alignment: string;
 
   /** IE: [size]="'small|medium|large'" **/
   @Input() size: boolean;

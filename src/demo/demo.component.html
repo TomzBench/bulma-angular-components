@@ -29,7 +29,7 @@
 
         <!-- TABS -->
         <div b-tabs
-          [size]="'large'"
+          [size]="'medium'"
           [active]="'inputs'">
           <div b-tabs-item="textarea"
             [icon]="'book'">
@@ -54,6 +54,10 @@
           <div b-tabs-item="file"
             [icon]="'file'">
             <p>TODO file</p>
+          </div>
+          <div b-tabs-item="tabs"
+            [icon]="'tag'">
+            <demo-tabs></demo-tabs>
           </div>
         </div>
       </div>
