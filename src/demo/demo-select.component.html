@@ -1,5 +1,6 @@
+<h1 class="title">Regular</h1>
 <div class="column is-6">
-  <div b-field="name">
+  <div b-field="Normal">
     <select b-select>
       <option *ngFor="let option of options">{{option}}</option>
     </select>
@@ -7,7 +8,31 @@
 </div>
 
 <div class="column is-6">
-  <div b-field="name">
+  <div b-field="Large">
+    <select b-select
+      [icon]="'ban'"
+      [size]="'large'"
+      [class]="'danger'">
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
+<!-- todo fix horizontal label when large -->
+<div class="column is-6">
+  <div b-field="Large Color">
+    <select b-select
+      [icon]="'check'"
+      [size]="'large'"
+      [class]="'success'">
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
+
+<h1 class="title">Horizontal</h1>
+<div class="column is-6">
+  <div b-field="name"
+    [horizontal]="true">
     <select b-select
       [loading]="true"
       [help]="'nice!'"
@@ -17,25 +42,14 @@
     </select>
   </div>
 </div>
-
-<div class="column is-6">
-  <div b-field="name">
-    <select b-select
-      [icon]="'cancel'"
-      [size]="'large'"
-      [class]="'danger'">
-      <option *ngFor="let option of options">{{option}}</option>
-    </select>
-  </div>
-</div>
-<!-- todo fix horizontal label when large -->
 <div class="column is-6">
   <div b-field="name"
     [horizontal]="true">
     <select b-select
-      [icon]="'check'"
-      [size]="'large'"
-      [class]="'success'">
+      [loading]="true"
+      [help]="'Error!'"
+      [icon]="'ban'"
+      [class]="'danger'">
       <option *ngFor="let option of options">{{option}}</option>
     </select>
   </div>
