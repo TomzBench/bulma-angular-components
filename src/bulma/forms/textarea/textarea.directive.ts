@@ -8,9 +8,9 @@ import {
   OnInit
 } from '@angular/core';
 
-
 import { BulmaBaseContext } from '../base';
 import { BulmaTextareaComponent } from './textarea.component';
+
 @Directive({
   selector: '[b-textarea]',
   providers: [{
@@ -22,6 +22,9 @@ export class BulmaTextareaDirective extends BulmaBaseContext implements OnInit {
 
   /** IE: [loading]="true" (default: false) */
   @Input() loading: boolean;
+
+  /** IE [help]="'This email is invalid'" **/
+  @Input() help: string;
 
   /** IE: [icon]="'user'" (or icon="user" for static binding) */
   @Input() icon: string;
