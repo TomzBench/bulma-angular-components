@@ -4,7 +4,8 @@ import {
   BulmaFieldComponent,
   BulmaFieldHorizontalComponent,
   BulmaInputComponent,
-  BulmaInputDirective
+  BulmaInputDirective,
+  BulmaTextareaComponent
 } from './forms';
 
 import {
