@@ -29,6 +29,8 @@ export class BulmaFieldHorizontalComponent implements OnInit, AfterContentInit {
   inputs: BulmaBaseContext[];
   label: string;
 
+  // TODO - read size
+
   constructor(private _resolver: ComponentFactoryResolver) {}
 
   ngOnInit() {}

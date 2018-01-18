@@ -6,6 +6,7 @@ import { BulmaModule } from '../bulma/bulma.module'
 import {
   DemoComponent,
   DemoInputComponent,
+  DemoSelectComponent,
   DemoTextareaComponent,
   DemoTabsComponent
 } from './';
@@ -16,6 +17,7 @@ import {
     DemoComponent,
     DemoInputComponent,
     DemoTextareaComponent,
+    DemoSelectComponent,
     DemoTabsComponent
   ],
   imports: [

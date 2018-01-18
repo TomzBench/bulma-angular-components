@@ -21,8 +21,21 @@
 <div class="column is-6">
   <div b-field="name">
     <select b-select
+      [icon]="'cancel'"
       [size]="'large'"
       [class]="'danger'">
+      <option *ngFor="let option of options">{{option}}</option>
+    </select>
+  </div>
+</div>
+<!-- todo fix horizontal label when large -->
+<div class="column is-6">
+  <div b-field="name"
+    [horizontal]="true">
+    <select b-select
+      [icon]="'check'"
+      [size]="'large'"
+      [class]="'success'">
       <option *ngFor="let option of options">{{option}}</option>
     </select>
   </div>

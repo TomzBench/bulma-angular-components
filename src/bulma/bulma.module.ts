@@ -47,6 +47,7 @@ import {
     BulmaFieldComponent,
     BulmaFieldHorizontalComponent,
     BulmaInputComponent,
+    BulmaSelectComponent,
     BulmaTextareaComponent,
     BulmaTabsItemListComponent,
     BulmaTabsItemViewComponent
