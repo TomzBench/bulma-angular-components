@@ -9,6 +9,7 @@ import {
 import { BulmaTabsActiveContext } from './tabs-active.class';
 
 /**
+ * A list component dynamically created (For internal use)
  */
 @Component({
   template: `
@@ -32,6 +33,15 @@ export class BulmaTabsItemListComponent implements OnInit {
 }
 
 /**
+ * ###Usage
+ * <div b-tabs>
+ *   <div b-tabs-item="'Tab 0'">
+ *   </div>
+ *   <div b-tabs-item="'Tab 1'">
+ *   </div>
+ *   <div b-tabs-item="'Tab 2'">
+ *   </div>
+ * </div>
  */
 @Component({
   selector: '[b-tabs-item]',
