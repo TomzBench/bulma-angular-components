@@ -8,10 +8,10 @@
 </div>
 
 <div class="column is-6">
-  <div b-field="Large">
+  <div b-field="small">
     <select b-select
       [icon]="'ban'"
-      [size]="'large'"
+      [size]="'small'"
       [class]="'danger'">
       <option *ngFor="let option of options">{{option}}</option>
     </select>
@@ -31,11 +31,12 @@
 
 <h1 class="title">Horizontal</h1>
 <div class="column is-6">
-  <div b-field="name"
+  <div b-field="Name"
     [horizontal]="true">
     <select b-select
       [loading]="true"
       [help]="'nice!'"
+      [size]="'large'"
       [icon]="'globe'"
       [class]="'success'">
       <option *ngFor="let option of options">{{option}}</option>
@@ -43,7 +44,7 @@
   </div>
 </div>
 <div class="column is-6">
-  <div b-field="name"
+  <div b-field="Name"
     [horizontal]="true">
     <select b-select
       [loading]="true"

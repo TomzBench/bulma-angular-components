@@ -12,7 +12,7 @@ import { BulmaBaseContext } from '../base';
 
 @Component({
   template: `
-    <div *ngIf="label" class="field-label is-normal">
+    <div *ngIf="label" class="field-label is-{{size}}">
       <label class="label">{{label}}</label>
     </div>
     <div class="field-body">
@@ -28,6 +28,7 @@ export class BulmaFieldHorizontalComponent implements OnInit, AfterContentInit {
   @HostBinding("class.is-horizontal") hasHorizontal: boolean = true;
   inputs: BulmaBaseContext[];
   label: string;
+  size: string;
 
   // TODO - read size
 
@@ -35,6 +36,7 @@ export class BulmaFieldHorizontalComponent implements OnInit, AfterContentInit {
 
   ngOnInit() {}
   ngAfterContentInit() {
+    this.size = this.inputs[0]['size'] || 'normal';
     this.inputs.forEach((context) => {
       let factory = this._resolver.resolveComponentFactory(context.component);
       let ref = this.container.createComponent(
