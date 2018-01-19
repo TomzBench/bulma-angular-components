@@ -8,6 +8,7 @@ import {
   DemoInputComponent,
   DemoSelectComponent,
   DemoTextareaComponent,
+  DemoCheckboxComponent,
   DemoTabsComponent
 } from './';
 
@@ -18,6 +19,7 @@ import {
     DemoInputComponent,
     DemoTextareaComponent,
     DemoSelectComponent,
+    DemoCheckboxComponent,
     DemoTabsComponent
   ],
   imports: [

@@ -8,7 +8,8 @@ import {
   BulmaTextareaComponent,
   BulmaTextareaDirective,
   BulmaSelectComponent,
-  BulmaSelectDirective
+  BulmaSelectDirective,
+  BulmaCheckboxComponent,
 } from './forms';
 
 import {
@@ -32,7 +33,8 @@ import {
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
-    BulmaSelectDirective
+    BulmaSelectDirective,
+    BulmaCheckboxComponent,
   ],
   exports: [
     BulmaFieldComponent,
@@ -48,6 +50,7 @@ import {
     BulmaFieldHorizontalComponent,
     BulmaInputComponent,
     BulmaSelectComponent,
+    BulmaCheckboxComponent,
     BulmaTextareaComponent,
     BulmaTabsItemListComponent,
     BulmaTabsItemViewComponent

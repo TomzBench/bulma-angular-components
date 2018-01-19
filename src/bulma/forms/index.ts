@@ -6,3 +6,4 @@ export * from './textarea/textarea.component';
 export * from './textarea/textarea.directive';
 export * from './select/select.component';
 export * from './select/select.directive';
+export * from './checkbox/checkbox.component';
