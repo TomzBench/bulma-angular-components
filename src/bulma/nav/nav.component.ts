@@ -17,7 +17,8 @@ import { BulmaNavMenuComponent } from './nav-menu.component';
 @Component({
   selector: '[b-nav]',
   template: `
-    <ng-content></ng-content>
+   <ng-content select="[b-nav-brand]"></ng-content>
+   <ng-content select="[b-nav-menu]"></ng-content>
    `,
   styles: []
 })

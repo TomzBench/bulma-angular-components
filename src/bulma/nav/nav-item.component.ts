@@ -9,16 +9,32 @@ import {
 } from '@angular/core';
 
 @Component({
+  selector: '[b-nav-item]',
+  template: `
+  <ng-content></ng-content>
+   `,
+  styles: []
+})
+export class BulmaNavItemComponent implements OnInit {
+
+  @HostBinding('class.navbar-item') classMenu: boolean = true;
+  constructor() {}
+  ngOnInit() {}
+}
+
+
+@Component({
   selector: '[b-nav-item-start]',
   template: `
   <ng-content></ng-content>
    `,
   styles: []
 })
-export class BulmaNavItemStartComponent implements OnInit {
+export class BulmaNavItemStartComponent extends BulmaNavItemComponent implements OnInit {
 
-  @HostBinding('class.navbar-item') classMenu: boolean = true;
-  constructor() {}
+  constructor() {
+    super();
+  }
   ngOnInit() {}
 }
 
@@ -29,8 +45,9 @@ export class BulmaNavItemStartComponent implements OnInit {
    `,
   styles: []
 })
-export class BulmaNavItemEndComponent implements OnInit {
-  @HostBinding('class.navbar-item') classMenu: boolean = true;
-  constructor() {}
+export class BulmaNavItemEndComponent extends BulmaNavItemComponent implements OnInit {
+  constructor() {
+    super();
+  }
   ngOnInit() {}
 }

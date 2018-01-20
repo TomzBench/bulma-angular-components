@@ -20,8 +20,10 @@ import {
 
 import {
   BulmaNavComponent,
+  BulmaNavBrandComponent,
   BulmaNavBurgerComponent,
   BulmaNavMenuComponent,
+  BulmaNavItemComponent,
   BulmaNavItemStartComponent,
   BulmaNavItemEndComponent
 } from './nav';
@@ -44,8 +46,10 @@ import {
     BulmaSelectDirective,
     BulmaCheckboxComponent,
     BulmaNavComponent,
+    BulmaNavBrandComponent,
     BulmaNavBurgerComponent,
     BulmaNavMenuComponent,
+    BulmaNavItemComponent,
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent
   ],
@@ -58,8 +62,10 @@ import {
     BulmaTabsItemViewComponent,
     BulmaTabsItemListComponent,
     BulmaNavComponent,
+    BulmaNavBrandComponent,
     BulmaNavBurgerComponent,
     BulmaNavMenuComponent,
+    BulmaNavItemComponent,
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent
   ],
