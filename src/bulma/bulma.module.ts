@@ -18,6 +18,14 @@ import {
   BulmaTabsItemListComponent
 } from './tabs';
 
+import {
+  BulmaNavComponent,
+  BulmaNavBurgerComponent,
+  BulmaNavMenuComponent,
+  BulmaNavItemStartComponent,
+  BulmaNavItemEndComponent
+} from './nav';
+
 @NgModule({
   imports: [
     CommonModule
@@ -35,6 +43,11 @@ import {
     BulmaSelectComponent,
     BulmaSelectDirective,
     BulmaCheckboxComponent,
+    BulmaNavComponent,
+    BulmaNavBurgerComponent,
+    BulmaNavMenuComponent,
+    BulmaNavItemStartComponent,
+    BulmaNavItemEndComponent
   ],
   exports: [
     BulmaFieldComponent,
@@ -43,7 +56,12 @@ import {
     BulmaSelectDirective,
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
-    BulmaTabsItemListComponent
+    BulmaTabsItemListComponent,
+    BulmaNavComponent,
+    BulmaNavBurgerComponent,
+    BulmaNavMenuComponent,
+    BulmaNavItemStartComponent,
+    BulmaNavItemEndComponent
   ],
   entryComponents: [
     BulmaFieldComponent,
