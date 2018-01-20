@@ -14,11 +14,9 @@ import {
   <div class="navbar-start">
     <ng-content select="[b-nav-item]"></ng-content>
     <ng-content select="[b-nav-item-start]"></ng-content>
-    <a class="navbar-item">start</a>
   </div>
   <div class="navbar-end">
     <ng-content select="[b-nav-item-end]"></ng-content>
-    <a class="navbar-item">left</a>
   </div>
    `,
   styles: []
