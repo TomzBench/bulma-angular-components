@@ -2,7 +2,9 @@ import {
   Injectable,
   Inject,
   ComponentFactoryResolver,
-  ViewContainerRef
+  ComponentRef,
+  ViewContainerRef,
+  Type
 } from '@angular/core';
 
 @Injectable()
@@ -15,9 +17,12 @@ export class BulmaModalService {
     this.factoryResolver_ = factoryResolver;
   }
 
-  /** Must set a parent element to append the modal too. IE inside your app component */
-  setViewContainerRef(v: ViewContainerRef) {
-    this.root_ = v;
+  /** Pass your compoenent to open, make sure your component is an entry component*/
+  open(v: ViewContainerRef, component: Type < any > ): ComponentRef < any > {
+    console.log('click');
+    let f = this.factoryResolver_.resolveComponentFactory(component);
+    let r = v.createComponent(f);
+    return r
   }
 
 }

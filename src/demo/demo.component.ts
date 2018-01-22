@@ -5,11 +5,4 @@ import { BulmaModule } from '../bulma/bulma.module';
   selector: 'demo-root',
   templateUrl: './demo.component.html'
 })
-export class DemoComponent {
-  constructor(
-    @Inject(BulmaModule) bulma: BulmaModule,
-    @Inject(ViewContainerRef) v: ViewContainerRef
-  ) {
-    bulma.setRootElement(v);
-  }
-}
+export class DemoComponent {}

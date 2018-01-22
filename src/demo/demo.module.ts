@@ -10,7 +10,8 @@ import {
   DemoTextareaComponent,
   DemoCheckboxComponent,
   DemoTabsComponent,
-  DemoModalComponent
+  DemoModalComponent,
+  DemoModalExample
 } from './';
 
 
@@ -22,13 +23,17 @@ import {
     DemoSelectComponent,
     DemoCheckboxComponent,
     DemoTabsComponent,
-    DemoModalComponent
+    DemoModalComponent,
+    DemoModalExample
   ],
   imports: [
     BrowserModule,
     BulmaModule
   ],
   providers: [],
+  entryComponents: [
+    DemoModalExample
+  ],
   bootstrap: [DemoComponent]
 })
 export class DemoModule {}

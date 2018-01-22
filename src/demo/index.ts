@@ -6,3 +6,4 @@ export * from './demo-select.component';
 export * from './demo-textarea.component';
 export * from './demo-tabs.component';
 export * from './demo-modal.component';
+export * from './demo-modal-example.component';

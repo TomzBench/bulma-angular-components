@@ -69,7 +69,8 @@ import { BulmaModalService } from './modal/modal.service';
     BulmaNavMenuComponent,
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
-    BulmaNavItemEndComponent
+    BulmaNavItemEndComponent,
+    BulmaModalComponent
   ],
   entryComponents: [
     BulmaFieldComponent,
@@ -82,8 +83,4 @@ import { BulmaModalService } from './modal/modal.service';
     BulmaModalComponent
   ]
 })
-export class BulmaModule {
-  modalService: BulmaModalService;
-  constructor(@Inject(BulmaModalService) modalService) { this.modalService = modalService; }
-  setRootElement(v: ViewContainerRef) { this.modalService.setViewContainerRef(v) };
-}
+export class BulmaModule {}
