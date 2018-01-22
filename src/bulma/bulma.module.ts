@@ -12,10 +12,8 @@ import {
   BulmaCheckboxComponent,
 } from './forms';
 
-import {
-  BulmaTabsComponent,
-  BulmaTabsItemViewComponent,
-} from './tabs';
+import { BulmaTabsComponent } from './tabs/tabs.component';
+import { BulmaTabsItemViewComponent } from './tabs/tabs-item.component';
 
 import {
   BulmaNavComponent,

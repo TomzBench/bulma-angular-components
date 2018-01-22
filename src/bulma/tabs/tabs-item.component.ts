@@ -3,7 +3,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  OnInit
+  OnInit,
+  Optional
 } from '@angular/core';
 
 import { BulmaTabsActiveContext } from './tabs-active.class';
@@ -20,17 +21,18 @@ import { BulmaTabsActiveContext } from './tabs-active.class';
  * </div>
  */
 @Component({
-  selector: '[b-tabs-item]',
+  selector: 'b-tabs-item',
   template: `
-  <ng-content *ngIf="active.label===label">
+  <ng-content *ngIf="active.idx===idx">
   </ng-content>
   `
 })
 export class BulmaTabsItemViewComponent implements OnInit {
 
-  @Input('b-tabs-item') label: string;
+  @Input() label: string;
   @Input() icon: string;
-  active: BulmaTabsActiveContext;
+  idx: number;                  /*!< our idx */
+  active: BulmaTabsActiveContext; /*!< Active idx */
   constructor() {}
   ngOnInit() {}
 

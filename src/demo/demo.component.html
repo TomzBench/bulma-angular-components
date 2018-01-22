@@ -30,37 +30,36 @@
       <div class="column is-12">
 
         <!-- TABS -->
-        <div b-tabs
-          [active]="'inputs'">
-          <div b-tabs-item="textarea"
-            [icon]="'book'">
+        <b-tabs>
+          <b-tabs-item label="textarea"
+            [icon]="'fa fa-book'">
             <demo-textarea></demo-textarea>
-          </div>
-          <div b-tabs-item="select"
-            [icon]="'arrow-down'">
+          </b-tabs-item>
+          <b-tabs-item label="select"
+            [icon]="'fa fa-arrow-down'">
             <demo-select></demo-select>
-          </div>
-          <div b-tabs-item="inputs"
-            [icon]="'user'">
+          </b-tabs-item>
+          <b-tabs-item label="inputs"
+            [icon]="'fa fa-user'">
             <demo-input></demo-input>
-          </div>
-          <div b-tabs-item="checkbox"
-            [icon]="'check'">
+          </b-tabs-item>
+          <b-tabs-item label="checkbox"
+            [icon]="'fa fa-check'">
             <demo-checkbox></demo-checkbox>
-          </div>
-          <div b-tabs-item="radio"
-            [icon]="'music'">
+          </b-tabs-item>
+          <b-tabs-item label="radio"
+            [icon]="'fa fa-music'">
             <p>TODO radio</p>
-          </div>
-          <div b-tabs-item="file"
-            [icon]="'file'">
+          </b-tabs-item>
+          <b-tabs-item label="file"
+            [icon]="'fa fa-file'">
             <p>TODO file</p>
-          </div>
-          <div b-tabs-item="tabs"
-            [icon]="'tag'">
+          </b-tabs-item>
+          <b-tabs-item label="tabs"
+            [icon]="'fa fa-tag'">
             <demo-tabs></demo-tabs>
-          </div>
-        </div>
+          </b-tabs-item>
+        </b-tabs>
       </div>
     </div>
   </div>
