@@ -15,7 +15,6 @@ import {
 import {
   BulmaTabsComponent,
   BulmaTabsItemViewComponent,
-  BulmaTabsItemListComponent
 } from './tabs';
 
 import {
@@ -39,7 +38,6 @@ import {
     BulmaInputDirective,
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
-    BulmaTabsItemListComponent,
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
@@ -60,7 +58,6 @@ import {
     BulmaSelectDirective,
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
-    BulmaTabsItemListComponent,
     BulmaNavComponent,
     BulmaNavBrandComponent,
     BulmaNavBurgerComponent,
@@ -76,7 +73,6 @@ import {
     BulmaSelectComponent,
     BulmaCheckboxComponent,
     BulmaTextareaComponent,
-    BulmaTabsItemListComponent,
     BulmaTabsItemViewComponent
   ]
 })
