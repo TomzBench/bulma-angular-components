@@ -20,7 +20,7 @@ import { BulmaModalService } from './modal.service';
 @Component({
   selector: 'b-modal',
   template: `
-  <div class="modal-background" (click)="modalService.close()"></div>
+  <div class="modal-background" (click)="close()"></div>
   <ng-content>
   </ng-content>
   `
@@ -30,6 +30,7 @@ export class BulmaModalComponent implements OnInit, AfterContentInit, OnDestroy 
   @HostBinding('class.is-active') classActive: boolean;
 
   modalService: BulmaModalService;
+  close() { this.modalService.close(); }
 
   constructor(@Inject(BulmaModalService) modalService) {
     this.modalService = modalService;
