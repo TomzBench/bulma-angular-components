@@ -8,15 +8,18 @@ import { DemoModalExample } from './demo-modal-example.component';
 })
 export class DemoModalComponent {
   viewContainer: ViewContainerRef;
-  modalService: BulmaModalService;
+
   constructor(
     @Inject(ViewContainerRef) v: ViewContainerRef,
-    @Inject(BulmaModalService) modalService: BulmaModalService) {
-    this.viewContainer = v;
-    this.modalService = modalService;
+    @Inject(BulmaModalService) public modalService: BulmaModalService) {
+
+    /**
+     * Must be called once somewhere in your application (IE in app.component)
+     **/
+    modalService.setView(v);
   }
 
   whenClicked() {
-    this.modalService.open(this.viewContainer, DemoModalExample);
+    this.modalService.open(DemoModalExample);
   }
 }

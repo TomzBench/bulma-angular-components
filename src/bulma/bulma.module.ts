@@ -25,7 +25,7 @@ import {
 import { BulmaTabsComponent } from './tabs/tabs.component';
 import { BulmaTabsItemViewComponent } from './tabs/tabs-item.component';
 
-import { BulmaModalComponent} from './modal/modal.component';
+import { BulmaModalComponent } from './modal/modal.component';
 import { BulmaModalService } from './modal/modal.service';
 
 @NgModule({
@@ -83,4 +83,13 @@ import { BulmaModalService } from './modal/modal.service';
     BulmaModalComponent
   ]
 })
-export class BulmaModule {}
+export class BulmaModule {
+
+  modalService: BulmaModalService;
+  constructor(modalService: BulmaModalService) {
+    this.modalService = modalService;
+  }
+  config(config: { view: ViewContainerRef }) {
+    this.modalService.setView(config.view);
+  }
+}
