@@ -7,4 +7,5 @@ import { BulmaModalComponent } from '../bulma';
 })
 export class DemoModalExample {
   /** Don't forget to add me into your entry components **/
+  constructor() {}
 }

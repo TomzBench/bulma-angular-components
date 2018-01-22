@@ -25,7 +25,7 @@ import {
 import { BulmaTabsComponent } from './tabs/tabs.component';
 import { BulmaTabsItemViewComponent } from './tabs/tabs-item.component';
 
-import { BulmaModalComponent } from './modal/modal.component';
+import { BulmaModalComponent, BulmaModalBackgroundComponent } from './modal/modal.component';
 import { BulmaModalService } from './modal/modal.service';
 
 @NgModule({
@@ -55,6 +55,7 @@ import { BulmaModalService } from './modal/modal.service';
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent,
     BulmaModalComponent,
+    BulmaModalBackgroundComponent
   ],
   exports: [
     BulmaFieldComponent,
@@ -70,7 +71,8 @@ import { BulmaModalService } from './modal/modal.service';
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent,
-    BulmaModalComponent
+    BulmaModalComponent,
+    BulmaModalBackgroundComponent
   ],
   entryComponents: [
     BulmaFieldComponent,
