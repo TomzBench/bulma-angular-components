@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './demo-checkbox.component.html',
   styleUrls: []
 })
-export class DemoCheckboxComponent {
-  burger: boolean;
-}
+export class DemoCheckboxComponent {}

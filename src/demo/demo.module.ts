@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Inject, ViewContainerRef } from '@angular/core';
 import { BulmaModule } from '../bulma/bulma.module'
 
 
@@ -9,7 +9,8 @@ import {
   DemoSelectComponent,
   DemoTextareaComponent,
   DemoCheckboxComponent,
-  DemoTabsComponent
+  DemoTabsComponent,
+  DemoModalComponent
 } from './';
 
 
@@ -20,7 +21,8 @@ import {
     DemoTextareaComponent,
     DemoSelectComponent,
     DemoCheckboxComponent,
-    DemoTabsComponent
+    DemoTabsComponent,
+    DemoModalComponent
   ],
   imports: [
     BrowserModule,
