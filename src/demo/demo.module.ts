@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Inject, ViewContainerRef } from '@angular/core';
 import { BulmaModule } from '../bulma/bulma.module'
 
 
@@ -9,7 +9,9 @@ import {
   DemoSelectComponent,
   DemoTextareaComponent,
   DemoCheckboxComponent,
-  DemoTabsComponent
+  DemoTabsComponent,
+  DemoModalComponent,
+  DemoModalExample
 } from './';
 
 
@@ -20,13 +22,18 @@ import {
     DemoTextareaComponent,
     DemoSelectComponent,
     DemoCheckboxComponent,
-    DemoTabsComponent
+    DemoTabsComponent,
+    DemoModalComponent,
+    DemoModalExample
   ],
   imports: [
     BrowserModule,
     BulmaModule
   ],
   providers: [],
+  entryComponents: [
+    DemoModalExample
+  ],
   bootstrap: [DemoComponent]
 })
 export class DemoModule {}

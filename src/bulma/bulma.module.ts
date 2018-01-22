@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Inject, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   BulmaFieldComponent,
@@ -12,9 +12,6 @@ import {
   BulmaCheckboxComponent,
 } from './forms';
 
-import { BulmaTabsComponent } from './tabs/tabs.component';
-import { BulmaTabsItemViewComponent } from './tabs/tabs-item.component';
-
 import {
   BulmaNavComponent,
   BulmaNavBrandComponent,
@@ -25,9 +22,18 @@ import {
   BulmaNavItemEndComponent
 } from './nav';
 
+import { BulmaTabsComponent } from './tabs/tabs.component';
+import { BulmaTabsItemViewComponent } from './tabs/tabs-item.component';
+
+import { BulmaModalComponent} from './modal/modal.component';
+import { BulmaModalService } from './modal/modal.service';
+
 @NgModule({
   imports: [
     CommonModule
+  ],
+  providers: [
+    BulmaModalService
   ],
   declarations: [
     BulmaFieldComponent,
@@ -47,7 +53,8 @@ import {
     BulmaNavMenuComponent,
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
-    BulmaNavItemEndComponent
+    BulmaNavItemEndComponent,
+    BulmaModalComponent,
   ],
   exports: [
     BulmaFieldComponent,
@@ -62,7 +69,8 @@ import {
     BulmaNavMenuComponent,
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
-    BulmaNavItemEndComponent
+    BulmaNavItemEndComponent,
+    BulmaModalComponent,
   ],
   entryComponents: [
     BulmaFieldComponent,
@@ -71,7 +79,8 @@ import {
     BulmaSelectComponent,
     BulmaCheckboxComponent,
     BulmaTextareaComponent,
-    BulmaTabsItemViewComponent
+    BulmaTabsItemViewComponent,
+    BulmaModalComponent
   ]
 })
 export class BulmaModule {}
