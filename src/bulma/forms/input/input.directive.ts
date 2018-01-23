@@ -38,7 +38,16 @@ export class BulmaInputDirective extends BulmaBaseContext implements OnInit {
   @Input() help: string;
 
   /** IE [class]="'danger'" **/
-  @Input() class: string;
+  class_: string;
+  @Input()
+  set class(value: string) {
+    if (this[this.class_]) this[this.class_] = false;
+    this.class_ = value;
+    this[this.class_] = true;
+  }
+  get class(): string {
+    return this.class_;
+  }
 
   /** IE [class]="'extra smallsmall|large'" **/
   @Input() size: string;

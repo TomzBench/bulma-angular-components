@@ -25,7 +25,7 @@ import { BulmaBaseContext } from '../base';
     <span [ngClass]="data.size&&'is-'+data.size" *ngIf="!data.loading&&!!data.iconRight" class="icon is-right">
       <i class="fa fa-{{data.iconRight}}"></i>
     </span>
-    <p class="help" [ngClass]="'is-'+data.class" ng-show="data.help">{{data.help}}</p>
+    <p class="help" [ngClass]="data.class&&'is-'+data.class" ng-show="data.help">{{data.help}}</p>
   </div>
   `,
   styles: []
