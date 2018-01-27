@@ -26,7 +26,7 @@ export class BulmaModalService {
   setView(v: ViewContainerRef) { this.view_ = v; }
 
   /** Pass your compoenent to open, make sure your component is an entry component*/
-  open<T>(component: Type < T > ): ComponentRef < T > {
+  open < T > (component: Type < T > ): ComponentRef < T > {
     if (!this.view_) {
       throw (
         "Please call BulmaModalService.setView(v:ViewContainerRef) from your " +
@@ -34,8 +34,8 @@ export class BulmaModalService {
       );
     }
     if (this.ref_) this.ref_.destroy;
-    let f = this.factoryResolver_.resolveComponentFactory(component);
-    this.ref_ = this.view_.createComponent(f);
+    let f = this.factoryResolver_.resolveComponentFactory < T > (component);
+    this.ref_ = this.view_.createComponent < T > (f);
     return this.ref_;
   }
 
