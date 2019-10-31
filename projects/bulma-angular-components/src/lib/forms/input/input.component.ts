@@ -1,6 +1,7 @@
 import {
   Component,
   ContentChild,
+  forwardRef,
   OnInit,
   AfterViewInit,
   HostBinding
@@ -17,6 +18,7 @@ interface InputContext {
 }
 
 import { BulmaBaseContext } from "../base";
+import { BulmaInputDirective } from "./input.directive";
 
 @Component({
   template: `
@@ -58,7 +60,13 @@ import { BulmaBaseContext } from "../base";
       </p>
     </div>
   `,
-  styles: []
+  styles: [],
+  providers: [
+    {
+      provide: BulmaBaseContext,
+      useExisting: forwardRef(() => BulmaInputDirective)
+    }
+  ]
 })
 export class BulmaInputComponent implements OnInit, AfterViewInit {
   // TODO extend to use an icon directive to manage icon package types and size

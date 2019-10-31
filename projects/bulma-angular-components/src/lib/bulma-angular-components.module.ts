@@ -20,8 +20,7 @@ import {
   BulmaTextareaComponent,
   BulmaTextareaDirective,
   BulmaSelectComponent,
-  BulmaSelectDirective,
-  BulmaCheckboxComponent
+  BulmaSelectDirective
 } from "./forms";
 
 @NgModule({
@@ -44,8 +43,7 @@ import {
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
-    BulmaSelectDirective,
-    BulmaCheckboxComponent
+    BulmaSelectDirective
   ],
   exports: [
     BulmaAngularComponentsComponent,
@@ -65,18 +63,18 @@ import {
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
-    BulmaSelectDirective,
-    BulmaCheckboxComponent
-  ],
-  entryComponents: [
-    // BulmaFieldComponent,
-    // BulmaFieldHorizontalComponent,
-    // BulmaInputComponent,
-    // BulmaSelectComponent,
-    // BulmaCheckboxComponent,
-    // BulmaTextareaComponent,
-    // BulmaTabsItemViewComponent
-    // BulmaModalComponent
+    BulmaSelectDirective
   ]
 })
 export class BulmaAngularComponentsModule {}
+
+export function entryComponents() {
+  return [
+    BulmaFieldComponent,
+    BulmaFieldHorizontalComponent,
+    BulmaInputComponent,
+    BulmaSelectComponent,
+    BulmaTabsItemViewComponent,
+    BulmaTextareaComponent
+  ];
+}
