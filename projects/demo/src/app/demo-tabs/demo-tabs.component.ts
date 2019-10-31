@@ -6,6 +6,11 @@ import { Component, OnInit } from "@angular/core";
   styles: []
 })
 export class DemoTabsComponent implements OnInit {
+  activeA = 0;
+  activeB = 0;
+  activeC = 0;
+  activeD = 0;
+  activeE = 0;
   constructor() {}
 
   ngOnInit() {}

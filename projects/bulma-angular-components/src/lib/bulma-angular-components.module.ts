@@ -2,27 +2,39 @@ import { NgModule, ViewContainerRef } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { BulmaAngularComponentsComponent } from "./bulma-angular-components.component";
+
 import {
   BulmaNavComponent,
-  BulmaNavBrandComponent,
   BulmaNavBurgerComponent,
-  BulmaNavMenuComponent,
+  BulmaNavMenuComponent
+} from "./navbar/nav/nav.component";
+
+import {
+  BulmaNavBrandComponent,
   BulmaNavItemComponent,
   BulmaNavItemStartComponent,
   BulmaNavItemEndComponent
-} from "./navbar/nav";
-import { BulmaTabsComponent, BulmaTabsItemViewComponent } from "./tabs";
+} from "./navbar/nav/nav.directive";
+
+// Tabs
 import {
-  BulmaFieldComponent,
-  BulmaFieldHorizontalComponent,
-  BulmaInputComponent,
-  BulmaInputDirective,
-  BulmaTextareaComponent,
-  BulmaTextareaDirective,
-  BulmaSelectComponent,
-  BulmaSelectDirective
-} from "./forms";
-import { BulmaModalComponent, BulmaModalService } from "./modal";
+  BulmaTabsComponent,
+  BulmaTabsItemViewComponent
+} from "./tabs/tabs.component";
+
+// Forms
+import { BulmaFieldComponent } from "./forms/field/field.component";
+import { BulmaFieldHorizontalComponent } from "./forms/field/field-horizontal.component";
+import { BulmaInputComponent } from "./forms/input/input.component";
+import { BulmaInputDirective } from "./forms/input/input.directive";
+import { BulmaTextareaComponent } from "./forms/textarea/textarea.component";
+import { BulmaTextareaDirective } from "./forms/textarea/textarea.directive";
+import { BulmaSelectComponent } from "./forms/select/select.component";
+import { BulmaSelectDirective } from "./forms/select/select.directive";
+
+// Modal
+import { BulmaModalService } from "./modal/modal.service";
+import { BulmaModalComponent } from "./modal/modal.component";
 
 @NgModule({
   imports: [CommonModule, BrowserModule],
