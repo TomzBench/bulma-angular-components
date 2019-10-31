@@ -1,22 +1,57 @@
-<div class="container" b-nav>
-  <div b-nav-brand>
-    <div b-nav-item>
-      <span class="icon icon-large"><i class="fa fa-gift fa-2x"></i></span>
-      <span style="padding-left:10px">Welcome</span>
+<section>
+  <div class="container" b-nav>
+    <div b-nav-brand>
+      <div b-nav-item>
+        <span class="icon icon-large"><i class="fa fa-gift fa-2x"></i></span>
+        <span style="padding-left:10px">Welcome</span>
+      </div>
+      <div b-nav-item>Test</div>
+      <div b-nav-burger></div>
     </div>
-    <div b-nav-item>Test</div>
-    <div b-nav-burger></div>
-  </div>
 
-  <div b-nav-menu>
-    <a b-nav-item-start>
-      <span class="icon"><i class="fa fa-github"></i></span>
-      <span>Left A</span>
-    </a>
-    <a b-nav-item-start>Left B</a>
-    <a b-nav-item-start>Left C</a>
-    <a b-nav-item-end>Right A</a>
-    <a b-nav-item-end>Right B</a>
-    <a b-nav-item-end>Right C</a>
+    <div b-nav-menu>
+      <a b-nav-item-start>
+        <span class="icon"><i class="fa fa-github"></i></span>
+        <span>Left A</span>
+      </a>
+      <a b-nav-item-start>Left B</a>
+      <a b-nav-item-start>Left C</a>
+      <a b-nav-item-end>Right A</a>
+      <a b-nav-item-end>Right B</a>
+      <a b-nav-item-end>Right C</a>
+    </div>
   </div>
-</div>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-12">
+        <!-- TABS -->
+        <b-tabs>
+          <b-tabs-item label="textarea" [icon]="'fa fa-book'">
+            <p>TODO TextArea</p>
+          </b-tabs-item>
+          <b-tabs-item label="select" [icon]="'fa fa-arrow-down'">
+            <p>TODO Select</p>
+          </b-tabs-item>
+          <b-tabs-item label="inputs" [icon]="'fa fa-user'">
+            <p>TODO Inputs</p>
+          </b-tabs-item>
+          <b-tabs-item label="checkbox" [icon]="'fa fa-check'">
+            <p>TODO Checkbox</p>
+          </b-tabs-item>
+          <b-tabs-item label="radio" [icon]="'fa fa-music'">
+            <p>TODO Radio</p>
+          </b-tabs-item>
+          <b-tabs-item label="file" [icon]="'fa fa-file'">
+            <p>TODO File</p>
+          </b-tabs-item>
+          <b-tabs-item label="tabs" [icon]="'fa fa-tag'">
+            <app-demo-tabs></app-demo-tabs>
+          </b-tabs-item>
+          <b-tabs-item label="modal" [icon]="'fa fa-square'">
+            <p>TODO Modal</p>
+          </b-tabs-item>
+        </b-tabs>
+      </div>
+    </div>
+  </div>
+</section>

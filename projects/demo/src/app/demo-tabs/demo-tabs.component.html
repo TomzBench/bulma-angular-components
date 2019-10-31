@@ -1,0 +1,156 @@
+<!-- Tabs Basic -->
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Basic</h1>
+    <b-tabs [(active)]="activeA">
+      <b-tabs-item [label]="'Pictures'">
+        <p>Your Pictures are here!</p>
+        <button (click)="activeA = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Music'">
+        <p>Your Music is here!</p>
+        <button (click)="activeA = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Videos'">
+        <p>Your Videos are here!</p>
+        <button (click)="activeA = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Documents'">
+        <p>Your Documents are here!</p>
+        <button (click)="activeA = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Small | Toggle</h1>
+    <b-tabs [(active)]="activeB" [size]="'small'" [toggle]="true">
+      <b-tabs-item [label]="'Pictures'">
+        <p>Your Pictures are here!</p>
+        <button (click)="activeB = 0" class="button is-small is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Music'">
+        <p>Your Music is here!</p>
+        <button (click)="activeB = 0" class="button is-small is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Videos'">
+        <p>Your Videos are here!</p>
+        <button (click)="activeB = 0" class="button is-small is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Documents'">
+        <p>Your Documents are here!</p>
+        <button (click)="activeB = 0" class="button is-small is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Large | Rounded</h1>
+    <b-tabs [(active)]="activeC" [size]="'large'" [rounded]="true">
+      <b-tabs-item [label]="'Pictures'">
+        <p>Your Pictures are here!</p>
+        <button (click)="activeC = 0" class="button is-large is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Music'">
+        <p>Your Music is here!</p>
+        <button (click)="activeC = 0" class="button is-large is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Videos'">
+        <p>Your Videos are here!</p>
+        <button (click)="activeC = 0" class="button is-large is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Documents'">
+        <p>Your Documents are here!</p>
+        <button (click)="activeC = 0" class="button is-large is-warning">
+          Reset
+        </button>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Fullwidth | Boxed</h1>
+    <b-tabs [(active)]="activeD" [fullwidth]="true" [box]="true">
+      <b-tabs-item [label]="'Pictures'">
+        <p>Your Pictures are here!</p>
+        <button (click)="activeD = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Music'">
+        <p>Your Music is here!</p>
+        <button (click)="activeD = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Videos'">
+        <p>Your Videos are here!</p>
+        <button (click)="activeD = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item [label]="'Documents'">
+        <p>Your Documents are here!</p>
+        <button (click)="activeD = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Alignment</h1>
+    <b-tabs [(active)]="activeE" [alignment]="'right'">
+      <b-tabs-item label="Pictures">
+        <p>Your Pictures are here!</p>
+        <button (click)="activeE = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item label="Music">
+        <p>Your Music is here!</p>
+        <button (click)="activeE = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item label="Videos">
+        <p>Your Videos are here!</p>
+        <button (click)="activeE = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+      <b-tabs-item label="Documents">
+        <p>Your Documents are here!</p>
+        <button (click)="activeE = 0" class="button is-warning">Reset</button>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-12">
+    <h1 class="subtitle has-text-grey">Icons</h1>
+    <b-tabs>
+      <b-tabs-item label="Pictures" [icon]="'fa fa-camera'">
+        <p>Your Pictures are here!</p>
+      </b-tabs-item>
+      <b-tabs-item label="Music" [icon]="'fa fa-music'">
+        <p>Your Music is here!</p>
+      </b-tabs-item>
+      <b-tabs-item label="Videos" [icon]="'fa fa-video-camera'">
+        <p>Your Videos are here!</p>
+      </b-tabs-item>
+      <b-tabs-item label="Documents" [icon]="'fa fa-file-o'">
+        <p>Your Documents are here!</p>
+      </b-tabs-item>
+    </b-tabs>
+  </div>
+</div>

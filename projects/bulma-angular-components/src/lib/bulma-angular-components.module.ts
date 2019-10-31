@@ -1,4 +1,6 @@
 import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { BrowserModule } from "@angular/platform-browser";
 import { BulmaAngularComponentsComponent } from "./bulma-angular-components.component";
 import {
   BulmaNavComponent,
@@ -9,9 +11,10 @@ import {
   BulmaNavItemStartComponent,
   BulmaNavItemEndComponent
 } from "./navbar/nav";
+import { BulmaTabsComponent, BulmaTabsItemViewComponent } from "./tabs";
 
 @NgModule({
-  imports: [],
+  imports: [CommonModule, BrowserModule],
   declarations: [
     BulmaAngularComponentsComponent,
     BulmaNavComponent,
@@ -20,7 +23,9 @@ import {
     BulmaNavMenuComponent,
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
-    BulmaNavItemEndComponent
+    BulmaNavItemEndComponent,
+    BulmaTabsComponent,
+    BulmaTabsItemViewComponent
   ],
   exports: [
     BulmaAngularComponentsComponent,
@@ -30,7 +35,9 @@ import {
     BulmaNavMenuComponent,
     BulmaNavItemComponent,
     BulmaNavItemStartComponent,
-    BulmaNavItemEndComponent
+    BulmaNavItemEndComponent,
+    BulmaTabsComponent,
+    BulmaTabsItemViewComponent
   ]
 })
 export class BulmaAngularComponentsModule {}
