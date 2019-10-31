@@ -12,6 +12,17 @@ import {
   BulmaNavItemEndComponent
 } from "./navbar/nav";
 import { BulmaTabsComponent, BulmaTabsItemViewComponent } from "./tabs";
+import {
+  BulmaFieldComponent,
+  BulmaFieldHorizontalComponent,
+  BulmaInputComponent,
+  BulmaInputDirective,
+  BulmaTextareaComponent,
+  BulmaTextareaDirective,
+  BulmaSelectComponent,
+  BulmaSelectDirective,
+  BulmaCheckboxComponent
+} from "./forms";
 
 @NgModule({
   imports: [CommonModule, BrowserModule],
@@ -25,7 +36,16 @@ import { BulmaTabsComponent, BulmaTabsItemViewComponent } from "./tabs";
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent,
     BulmaTabsComponent,
-    BulmaTabsItemViewComponent
+    BulmaTabsItemViewComponent,
+    BulmaFieldComponent,
+    BulmaFieldHorizontalComponent,
+    BulmaInputComponent,
+    BulmaInputDirective,
+    BulmaTextareaComponent,
+    BulmaTextareaDirective,
+    BulmaSelectComponent,
+    BulmaSelectDirective,
+    BulmaCheckboxComponent
   ],
   exports: [
     BulmaAngularComponentsComponent,
@@ -37,7 +57,16 @@ import { BulmaTabsComponent, BulmaTabsItemViewComponent } from "./tabs";
     BulmaNavItemStartComponent,
     BulmaNavItemEndComponent,
     BulmaTabsComponent,
-    BulmaTabsItemViewComponent
+    BulmaTabsItemViewComponent,
+    BulmaFieldComponent,
+    BulmaFieldHorizontalComponent,
+    BulmaInputComponent,
+    BulmaInputDirective,
+    BulmaTextareaComponent,
+    BulmaTextareaDirective,
+    BulmaSelectComponent,
+    BulmaSelectDirective,
+    BulmaCheckboxComponent
   ]
 })
 export class BulmaAngularComponentsModule {}

@@ -29,7 +29,8 @@
             ],
             "styles": [
               "projects/demo/src/styles.scss",
-              "node_modules/bulma/bulma.sass"
+              "node_modules/bulma/bulma.sass",
+              "node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           },
@@ -95,7 +96,8 @@
             ],
             "styles": [
               "projects/demo/src/styles.scss",
-              "node_modules/bulma/bulma.sass"
+              "node_modules/bulma/bulma.sass",
+              "node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           }
@@ -108,9 +110,7 @@
               "projects/demo/tsconfig.spec.json",
               "projects/demo/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -155,12 +155,11 @@
               "projects/bulma-angular-components/tsconfig.lib.json",
               "projects/bulma-angular-components/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "bulma-angular-components"
 }

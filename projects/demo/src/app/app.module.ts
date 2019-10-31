@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 
 import { BulmaAngularComponentsModule } from "bulma-angular-components";
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
+import { DemoInputsComponent } from './demo-inputs/demo-inputs.component';
 
 @NgModule({
-  declarations: [AppComponent, DemoTabsComponent],
+  declarations: [AppComponent, DemoTabsComponent, DemoInputsComponent],
   imports: [BrowserModule, AppRoutingModule, BulmaAngularComponentsModule],
   providers: [],
   bootstrap: [AppComponent]
