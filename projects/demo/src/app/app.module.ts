@@ -19,6 +19,7 @@ import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
 // combine entry components like this.  Doing differently will have ng build fail,
 // and ng serve compile works after second try...
 let entry = [].concat(DemoModalExample).concat(...entryComponents());
+console.log(entry);
 
 @NgModule({
   declarations: [
