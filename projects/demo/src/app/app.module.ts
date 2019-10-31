@@ -15,6 +15,9 @@ import { DemoTextareaComponent } from "./demo-textarea/demo-textarea.component";
 import { DemoModalComponent } from "./demo-modal/demo-modal.component";
 import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
 
+// For some reason compile throws error when combining array is inside NgModule
+let entry = [DemoModalExample, ...entryComponents()];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,6 @@ import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
   imports: [BrowserModule, AppRoutingModule, BulmaAngularComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DemoModalExample, ...entryComponents()]
+  entryComponents: entry
 })
 export class AppModule {}
