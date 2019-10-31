@@ -67,6 +67,16 @@ import {
     BulmaSelectComponent,
     BulmaSelectDirective,
     BulmaCheckboxComponent
+  ],
+  entryComponents: [
+    // BulmaFieldComponent,
+    // BulmaFieldHorizontalComponent,
+    // BulmaInputComponent,
+    // BulmaSelectComponent,
+    // BulmaCheckboxComponent,
+    // BulmaTextareaComponent,
+    // BulmaTabsItemViewComponent
+    // BulmaModalComponent
   ]
 })
 export class BulmaAngularComponentsModule {}
