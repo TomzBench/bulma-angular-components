@@ -11,7 +11,9 @@ import {
 import { DemoTabsComponent } from "./demo-tabs/demo-tabs.component";
 import { DemoInputsComponent } from "./demo-inputs/demo-inputs.component";
 import { DemoSelectComponent } from "./demo-select/demo-select.component";
-import { DemoTextareaComponent } from './demo-textarea/demo-textarea.component';
+import { DemoTextareaComponent } from "./demo-textarea/demo-textarea.component";
+import { DemoModalComponent } from "./demo-modal/demo-modal.component";
+import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DemoTextareaComponent } from './demo-textarea/demo-textarea.component';
     DemoTabsComponent,
     DemoInputsComponent,
     DemoSelectComponent,
-    DemoTextareaComponent
+    DemoTextareaComponent,
+    DemoModalComponent,
+    DemoModalExample
   ],
   imports: [BrowserModule, AppRoutingModule, BulmaAngularComponentsModule],
   providers: [],

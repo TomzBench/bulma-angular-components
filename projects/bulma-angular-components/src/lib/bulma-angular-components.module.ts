@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, ViewContainerRef } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { BulmaAngularComponentsComponent } from "./bulma-angular-components.component";
@@ -22,9 +22,11 @@ import {
   BulmaSelectComponent,
   BulmaSelectDirective
 } from "./forms";
+import { BulmaModalComponent, BulmaModalService } from "./modal";
 
 @NgModule({
   imports: [CommonModule, BrowserModule],
+  providers: [BulmaModalService],
   declarations: [
     BulmaAngularComponentsComponent,
     BulmaNavComponent,
@@ -43,7 +45,8 @@ import {
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
-    BulmaSelectDirective
+    BulmaSelectDirective,
+    BulmaModalComponent
   ],
   exports: [
     BulmaAngularComponentsComponent,
@@ -63,10 +66,19 @@ import {
     BulmaTextareaComponent,
     BulmaTextareaDirective,
     BulmaSelectComponent,
-    BulmaSelectDirective
+    BulmaSelectDirective,
+    BulmaModalComponent
   ]
 })
-export class BulmaAngularComponentsModule {}
+export class BulmaAngularComponentsModule {
+  modalService: BulmaModalService;
+  constructor(modalService: BulmaModalService) {
+    this.modalService = modalService;
+  }
+  config(config: { view: ViewContainerRef }) {
+    this.modalService.setView(config.view);
+  }
+}
 
 export function entryComponents() {
   return [
