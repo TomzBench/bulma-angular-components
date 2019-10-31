@@ -63,6 +63,35 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "gh-pages": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/demo/src/environments/environment.ts",
+                  "with": "projects/demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -74,6 +103,9 @@
           "configurations": {
             "production": {
               "browserTarget": "demo:build:production"
+            },
+            "gh-pages": {
+              "browserTarget": "demo:build:gh-pages"
             }
           }
         },
@@ -122,6 +154,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "demo:serve:production"
+            },
+            "gh-pages": {
+              "devServerTarget": "demo:serve:gh-pages"
             }
           }
         }
