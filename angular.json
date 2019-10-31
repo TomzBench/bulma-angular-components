@@ -71,6 +71,7 @@
                   "with": "projects/demo/src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "/bulma-angular-components",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
