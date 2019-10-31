@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "angular-bulma-components": [
-        "dist/angular-bulma-components"
+      "bulma-angular-components": [
+        "dist/bulma-angular-components"
       ],
-      "angular-bulma-components/*": [
-        "dist/angular-bulma-components/*"
+      "bulma-angular-components/*": [
+        "dist/bulma-angular-components/*"
       ]
     }
   },

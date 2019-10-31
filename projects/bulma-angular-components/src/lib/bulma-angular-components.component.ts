@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-angular-bulma-components',
+  selector: 'lib-bulma-angular-components',
   template: `
     <p>
-      angular-bulma-components works!
+      bulma-angular-components works!
     </p>
   `,
   styles: []
 })
-export class AngularBulmaComponentsComponent implements OnInit {
+export class BulmaAngularComponentsComponent implements OnInit {
 
   constructor() { }
 

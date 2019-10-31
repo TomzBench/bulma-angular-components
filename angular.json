@@ -3,41 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-bulma-components": {
-      "projectType": "library",
-      "root": "projects/angular-bulma-components",
-      "sourceRoot": "projects/angular-bulma-components/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/angular-bulma-components/tsconfig.lib.json",
-            "project": "projects/angular-bulma-components/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/angular-bulma-components/src/test.ts",
-            "tsConfig": "projects/angular-bulma-components/tsconfig.spec.json",
-            "karmaConfig": "projects/angular-bulma-components/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/angular-bulma-components/tsconfig.lib.json",
-              "projects/angular-bulma-components/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "demo": {
       "projectType": "application",
       "schematics": {
@@ -159,6 +124,41 @@
           }
         }
       }
+    },
+    "bulma-angular-components": {
+      "projectType": "library",
+      "root": "projects/bulma-angular-components",
+      "sourceRoot": "projects/bulma-angular-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/bulma-angular-components/tsconfig.lib.json",
+            "project": "projects/bulma-angular-components/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bulma-angular-components/src/test.ts",
+            "tsConfig": "projects/bulma-angular-components/tsconfig.spec.json",
+            "karmaConfig": "projects/bulma-angular-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/bulma-angular-components/tsconfig.lib.json",
+              "projects/bulma-angular-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
-  "defaultProject": "angular-bulma-components"
+  "defaultProject": "bulma-angular-components"
 }
