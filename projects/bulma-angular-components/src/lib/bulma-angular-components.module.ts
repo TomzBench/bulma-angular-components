@@ -80,7 +80,8 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaSelectComponent,
     BulmaSelectDirective,
     BulmaModalComponent
-  ]
+  ],
+  entryComponents: entryComponents()
 })
 export class BulmaAngularComponentsModule {
   modalService: BulmaModalService;
