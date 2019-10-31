@@ -15,12 +15,6 @@ import { DemoTextareaComponent } from "./demo-textarea/demo-textarea.component";
 import { DemoModalComponent } from "./demo-modal/demo-modal.component";
 import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
 
-// There is some kind of typescript bug with the spread operator, so we
-// combine entry components like this.  Doing differently will have ng build fail,
-// and ng serve compile works after second try...
-let entry = [].concat(DemoModalExample).concat(...entryComponents());
-console.log(entry);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +28,6 @@ console.log(entry);
   imports: [BrowserModule, AppRoutingModule, BulmaAngularComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: entry
+  entryComponents: [DemoModalExample]
 })
 export class AppModule {}
