@@ -1,57 +1,27 @@
-# Usage (Inputs)
-```
-<div b-field="Name">
-  <input b-input
-         [icon]="'user'"
-	 [iconRight]="'check'"
-	 [loading]="true">
-</div>
-<div b-field="Email">
-  <input b-input
-         [icon]="'envelope'"
-	 [iconRight]="'check'"
-	 [class]="'danger'"
-	 [help]="'Invalid!'">
-</div>
-```
+# BulmaAngularComponents
 
-# Usage Inputs (Horizontal)
-```
-<div b-field="Name"
-     [horizontal]="true">
-  <input b-input
-         [icon]="'user'"
-	 [iconRight]="'check'"
-	 [loading]="true">
-  <input b-input
-         [icon]="'envelope'"
-	 [iconRight]="'check'"
-	 [loading]="false">
-</div>
-```
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
-# Usage Tabs
-```
-<div b-tabs>
-  <div b-tabs-item="Status">
-    <app-status></app-status>
-  </div>
-  <div b-tabs-item="Network">
-    <app-network></app-network>
-  </div>
-  <div b-tabs-item="Hardware">
-    <app-hardware></app-hardware>
-  </div>
-</div>
-```
+## Development server
 
-# QuickStart (Use external app)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-ng new my-app --style=scss
-cd my-app
-npm install "file:path/to/bulma-angular-components"
-npm install bulma
-Add @import '~bulma/bulma' to src/styles/styles.scss
-Add @import your font icon package (IE @import '~font-awesome/css/font-awesome.min.css')
-(Note if font-awesome is not your default icons, TODO configure icon-pack)
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
