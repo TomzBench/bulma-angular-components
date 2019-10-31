@@ -3,7 +3,11 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
 
-const routes: Routes = [{ path: "", component: AppComponent }];
+const routes: Routes = [
+  { path: "demo", component: AppComponent },
+  { path: "", redirectTo: "/demo", pathMatch: "full" },
+  { path: "**", redirectTo: "/demo", pathMatch: "full" }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
