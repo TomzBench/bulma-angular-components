@@ -1,12 +1,36 @@
-import { NgModule } from '@angular/core';
-import { BulmaAngularComponentsComponent } from './bulma-angular-components.component';
-
-
+import { NgModule } from "@angular/core";
+import { BulmaAngularComponentsComponent } from "./bulma-angular-components.component";
+import {
+  BulmaNavComponent,
+  BulmaNavBrandComponent,
+  BulmaNavBurgerComponent,
+  BulmaNavMenuComponent,
+  BulmaNavItemComponent,
+  BulmaNavItemStartComponent,
+  BulmaNavItemEndComponent
+} from "./navbar/nav";
 
 @NgModule({
-  declarations: [BulmaAngularComponentsComponent],
-  imports: [
+  imports: [],
+  declarations: [
+    BulmaAngularComponentsComponent,
+    BulmaNavComponent,
+    BulmaNavBrandComponent,
+    BulmaNavBurgerComponent,
+    BulmaNavMenuComponent,
+    BulmaNavItemComponent,
+    BulmaNavItemStartComponent,
+    BulmaNavItemEndComponent
   ],
-  exports: [BulmaAngularComponentsComponent]
+  exports: [
+    BulmaAngularComponentsComponent,
+    BulmaNavComponent,
+    BulmaNavBrandComponent,
+    BulmaNavBurgerComponent,
+    BulmaNavMenuComponent,
+    BulmaNavItemComponent,
+    BulmaNavItemStartComponent,
+    BulmaNavItemEndComponent
+  ]
 })
-export class BulmaAngularComponentsModule { }
+export class BulmaAngularComponentsModule {}
