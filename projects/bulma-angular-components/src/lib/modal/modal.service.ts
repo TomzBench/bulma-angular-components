@@ -32,7 +32,7 @@ export class BulmaModalService {
       throw "Please call BulmaModalService.setView(v:ViewContainerRef) from your " +
         "root component to initialize service!";
     }
-    if (this.ref_) this.ref_.destroy;
+    if (this.ref_) this.ref_.destroy();
     let f = this.factoryResolver_.resolveComponentFactory<T>(component);
     this.ref_ = this.view_.createComponent<T>(f);
     return this.ref_;

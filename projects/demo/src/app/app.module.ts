@@ -28,6 +28,6 @@ import { DemoModalExample } from "./demo-modal/demo-modal-example.component";
   imports: [BrowserModule, AppRoutingModule, BulmaAngularComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [].concat(entryComponents())
+  entryComponents: [DemoModalExample, ...entryComponents()]
 })
 export class AppModule {}
