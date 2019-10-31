@@ -92,7 +92,6 @@ export class BulmaNavComponent implements OnInit {
   ngOnInit() {}
   ngAfterContentInit() {
     if (this.burger) {
-      console.log(this.menu);
       this.burger.activeChange.subscribe((a: boolean) => {
         if (this.menu) this.menu.whenActiveChange(a);
       });
