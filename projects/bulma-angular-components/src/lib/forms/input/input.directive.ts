@@ -1,7 +1,21 @@
-import { Directive, OnInit, HostBinding, Input } from "@angular/core";
+import {
+  Directive,
+  forwardRef,
+  OnInit,
+  HostBinding,
+  Input
+} from "@angular/core";
 import { BulmaFormBaseContext } from "../base";
 
-@Directive({ selector: "[b-input]" })
+@Directive({
+  selector: "[b-input]",
+  providers: [
+    {
+      provide: BulmaFormBaseContext,
+      useExisting: forwardRef(() => BulmaInputDirective)
+    }
+  ]
+})
 export class BulmaInputDirective extends BulmaFormBaseContext
   implements OnInit {
   constructor() {

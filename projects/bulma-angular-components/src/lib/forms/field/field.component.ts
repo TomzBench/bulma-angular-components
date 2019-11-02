@@ -8,7 +8,8 @@ import {
   AfterContentInit
 } from "@angular/core";
 
-import { BulmaInputDirective } from "../input/input.directive";
+// import { BulmaInputDirective } from "../input/input.directive";
+import { BulmaFormBaseContext } from "../base";
 
 export type SIZE = "small" | "large";
 export type CLASS = "info" | "danger" | "success";
@@ -21,7 +22,9 @@ export type CLASS = "info" | "danger" | "success";
 export class BulmaFieldComponent implements OnInit, AfterContentInit {
   constructor() {}
   @HostBinding("class.field") hasField: boolean = true;
-  @ContentChildren(BulmaInputDirective) inputs: QueryList<BulmaInputDirective>;
+  @ContentChildren(BulmaFormBaseContext) inputs: QueryList<
+    BulmaFormBaseContext
+  >;
   @Input("b-field") label: string;
   @Input() class: string;
   @Input() loading: boolean;
@@ -41,6 +44,7 @@ export class BulmaFieldComponent implements OnInit, AfterContentInit {
   ngOnInit() {}
 
   ngAfterContentInit() {
+    console.log(this.inputs);
     this.inputs.toArray().forEach(input => {
       input.setClasses(this.getSize() + " " + this.getClass());
     });
