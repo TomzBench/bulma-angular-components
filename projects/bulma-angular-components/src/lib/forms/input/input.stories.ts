@@ -64,29 +64,42 @@ export const smallSuccessHelp = () => ({
   `
 });
 
-// export const iconLeft = {
-//   template: `
-//   <div b-field="Label" class="danger" [loading]="true" icon="envelope">
-//     <input b-input type="input" placeholder="large"/>
-//   </div>
-//   `
-// };
-//
-// export const iconRight = {
-//   template: `
-//   <div b-field="Label" class="danger" [loading]="true" iconRight="envelope">
-//     <input b-input type="input" placeholder="large"/>
-//   </div>
-//   `
-// };
-//
-// export const icons = {
-//   template: `
-//   <div b-field="Label" class="danger" [loading]="true" iconRight="envelope" iconLeft="check">
-//     <input b-input type="input" placeholder="large"/>
-//   </div>
-//   `
-// };
+export const iconLeft = () => ({
+  template: `
+  <div b-field="Label" icon="envelope" class="success" [loading]="true" help="Good Work!!">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
+
+export const smallIcon = () => ({
+  template: `
+  <div b-field="Label" size="small" icon="envelope" class="success" [loading]="true" help="Good Work!!">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
+
+export const largeIcon = () => ({
+  template: `
+  <div b-field="Label" size="large" icon="envelope" class="success" [loading]="true" help="Good Work!!">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
+
+export const twoIcons = () => ({
+  template: `
+  <div b-field="Label" 
+    size="large" 
+    icon="envelope" 
+    iconRight="check"
+    class="success" 
+    help="Good Work!!">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
 
 export const raw = () => ({
   template: `
