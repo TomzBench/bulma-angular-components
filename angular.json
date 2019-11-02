@@ -195,6 +195,30 @@
           }
         }
       }
+    },
+    "storybook": {
+      "projectType": "library",
+      "root": "projects",
+      "sourceRoot": "projects/demo/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/demo/tsconfig.app.json",
+            "outputPath": "dist/storybook",
+            "assets": [
+              "projects/demo/src/favicon.ico",
+              "projects/demo/src/assets"
+            ],
+            "styles": [
+              "projects/demo/src/styles.scss",
+              "node_modules/font-awesome/scss/font-awesome.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "bulma-angular-components"
