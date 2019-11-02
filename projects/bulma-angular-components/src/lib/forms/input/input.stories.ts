@@ -5,7 +5,7 @@ import { BulmaAngularComponentsModule } from "../../bulma-angular-components.mod
 import { moduleMetadata } from "@storybook/angular";
 
 export default {
-  title: "Login Component",
+  title: "Input Component",
   decorators: [
     moduleMetadata({
       imports: [BulmaAngularComponentsModule],
@@ -184,6 +184,71 @@ export const wackoHorizontal = () => ({
       help="third">
       <input b-input type="password" placeholder="Third"/>
     </div>
+  </div>
+  `
+});
+
+export const extraLabelsHorizontal = () => ({
+  template: `
+  <div b-field-horizontal="" size="small">
+    <div b-field="label 1"
+      size="small"
+      icon="envelope"
+      [loading]="true"
+      class="success"
+      help="First">
+      <input b-input type="input" placeholder="First"/>
+    </div>
+    <div b-field="label 2"
+      size="small"
+      icon="check"
+      class="info"
+      help="Second">
+      <input b-input type="input" placeholder="Second"/>
+    </div>
+    <div b-field="label 3"
+      size="small"
+      icon="user"
+      iconRight="key"
+      class="danger"
+      help="third">
+      <input b-input type="password" placeholder="Third"/>
+    </div>
+  </div>
+  `
+});
+
+export const horizontalWithButton = () => ({
+  template: `
+  <div b-field-horizontal="" size="small">
+    <div b-field="label 1"
+      size="small"
+      icon="envelope"
+      [loading]="true"
+      class="success"
+      help="First">
+      <input b-input type="input" placeholder="First"/>
+    </div>
+    <div b-field="label 2"
+      size="small"
+      icon="check"
+      class="info"
+      help="Second">
+      <input b-input type="input" placeholder="Second"/>
+    </div>
+    <div b-field="label 3"
+      size="small"
+      icon="user"
+      iconRight="key"
+      class="danger"
+      help="third">
+      <input b-input type="password" placeholder="Third"/>
+    </div>
+  </div>
+  <div b-field-horizontal>
+    <div class="field">
+      <button class="button is-primary">Submit</button>
+    <div>
   </div>
   `
 });
