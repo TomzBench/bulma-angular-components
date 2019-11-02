@@ -34,19 +34,59 @@ export const success = () => ({
 
 export const large = () => ({
   template: `
-  <div b-field="Label" class="large">
+  <div b-field="Label" size="large">
     <input b-input type="input" placeholder="large"/>
   </div>
   `
 });
 
-export const loading = () => ({
+export const dangerLoading = () => ({
   template: `
   <div b-field="Label" class="danger" [loading]="true">
     <input b-input type="input" placeholder="large"/>
   </div>
   `
 });
+
+export const largeLoading = () => ({
+  template: `
+  <div b-field="Label" size="large" [loading]="true">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
+
+export const smallSuccessHelp = () => ({
+  template: `
+  <div b-field="Label" size="small" class="success" [loading]="true" help="Good Work!!">
+    <input b-input type="input" placeholder="large"/>
+  </div>
+  `
+});
+
+// export const iconLeft = {
+//   template: `
+//   <div b-field="Label" class="danger" [loading]="true" icon="envelope">
+//     <input b-input type="input" placeholder="large"/>
+//   </div>
+//   `
+// };
+//
+// export const iconRight = {
+//   template: `
+//   <div b-field="Label" class="danger" [loading]="true" iconRight="envelope">
+//     <input b-input type="input" placeholder="large"/>
+//   </div>
+//   `
+// };
+//
+// export const icons = {
+//   template: `
+//   <div b-field="Label" class="danger" [loading]="true" iconRight="envelope" iconLeft="check">
+//     <input b-input type="input" placeholder="large"/>
+//   </div>
+//   `
+// };
 
 export const raw = () => ({
   template: `
