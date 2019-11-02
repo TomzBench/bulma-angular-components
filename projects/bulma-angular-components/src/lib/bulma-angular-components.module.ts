@@ -24,13 +24,9 @@ import {
 
 // Forms
 import { BulmaFieldComponent } from "./forms/field/field.component";
-import { BulmaFieldHorizontalComponent } from "./forms/field/field-horizontal.component";
-import { BulmaInputComponent } from "./forms/input/input.component";
 import { BulmaInputDirective } from "./forms/input/input.directive";
-import { BulmaTextareaComponent } from "./forms/textarea/textarea.component";
-import { BulmaTextareaDirective } from "./forms/textarea/textarea.directive";
-import { BulmaSelectComponent } from "./forms/select/select.component";
 import { BulmaSelectDirective } from "./forms/select/select.directive";
+import { BulmaTextareaDirective } from "./forms/textarea/textarea.directive";
 
 // Modal
 import { BulmaModalService } from "./modal/modal.service";
@@ -51,12 +47,11 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
-    BulmaFieldHorizontalComponent,
-    BulmaInputComponent,
     BulmaInputDirective,
-    BulmaTextareaComponent,
+    BulmaInputDirective,
     BulmaTextareaDirective,
-    BulmaSelectComponent,
+    BulmaTextareaDirective,
+    BulmaSelectDirective,
     BulmaSelectDirective,
     BulmaModalComponent
   ],
@@ -72,16 +67,15 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
-    BulmaFieldHorizontalComponent,
-    BulmaInputComponent,
     BulmaInputDirective,
-    BulmaTextareaComponent,
+    BulmaInputDirective,
     BulmaTextareaDirective,
-    BulmaSelectComponent,
+    BulmaTextareaDirective,
+    BulmaSelectDirective,
     BulmaSelectDirective,
     BulmaModalComponent
   ],
-  entryComponents: entryComponents()
+  entryComponents: []
 })
 export class BulmaAngularComponentsModule {
   modalService: BulmaModalService;
@@ -91,15 +85,4 @@ export class BulmaAngularComponentsModule {
   config(config: { view: ViewContainerRef }) {
     this.modalService.setView(config.view);
   }
-}
-
-export function entryComponents() {
-  return [
-    BulmaFieldComponent,
-    BulmaFieldHorizontalComponent,
-    BulmaInputComponent,
-    BulmaSelectComponent,
-    BulmaTabsItemViewComponent,
-    BulmaTextareaComponent
-  ];
 }
