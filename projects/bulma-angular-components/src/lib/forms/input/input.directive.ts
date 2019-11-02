@@ -1,8 +1,12 @@
 import { Directive, OnInit, HostBinding, Input } from "@angular/core";
+import { BulmaFormBaseContext } from "../base";
 
 @Directive({ selector: "[b-input]" })
-export class BulmaInputDirective implements OnInit {
-  constructor() {}
+export class BulmaInputDirective extends BulmaFormBaseContext
+  implements OnInit {
+  constructor() {
+    super();
+  }
   @HostBinding("class.input") hasClass: boolean = true;
   @HostBinding("class") classes = "input";
 

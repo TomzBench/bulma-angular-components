@@ -42,7 +42,6 @@ export class BulmaFieldComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit() {
     this.inputs.toArray().forEach(input => {
-      // console.log(input);
       input.setClasses(this.getSize() + " " + this.getClass());
     });
   }
