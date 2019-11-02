@@ -1,1 +1,28 @@
-<p>field works!</p>
+<div class="field">
+  <label *ngIf="label" class="label {{ size && 'is-' + size }}">
+    {{ label }}
+  </label>
+  <div
+    class="{{ 'control ' + (size && 'is-' + size) }}"
+    [ngClass]="{
+      'is-loading': loading,
+      'has-icons-left': !!icon,
+      'has-icons-right': loading || !!iconRight
+    }"
+  >
+    <ng-content></ng-content>
+    <span [ngClass]="size && 'is-' + size" *ngIf="!!icon" class="icon is-left">
+      <i class="fa fa-{{ icon }}"></i>
+    </span>
+    <span
+      [ngClass]="size && 'is-' + size"
+      *ngIf="!loading && !!iconRight"
+      class="icon is-right"
+    >
+      <i class="fa fa-{{ iconRight }}"></i>
+    </span>
+    <p class="help" [ngClass]="class && 'is-' + class" ng-show="help">
+      {{ help }}
+    </p>
+  </div>
+</div>

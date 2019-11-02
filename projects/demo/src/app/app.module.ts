@@ -4,10 +4,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import {
-  BulmaAngularComponentsModule,
-  entryComponents
-} from "bulma-angular-components";
+import { BulmaAngularComponentsModule } from "bulma-angular-components";
 import { DemoTabsComponent } from "./demo-tabs/demo-tabs.component";
 import { DemoInputsComponent } from "./demo-inputs/demo-inputs.component";
 import { DemoSelectComponent } from "./demo-select/demo-select.component";

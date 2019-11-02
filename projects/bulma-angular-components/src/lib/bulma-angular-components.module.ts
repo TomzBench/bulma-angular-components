@@ -48,10 +48,7 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
     BulmaInputDirective,
-    BulmaInputDirective,
     BulmaTextareaDirective,
-    BulmaTextareaDirective,
-    BulmaSelectDirective,
     BulmaSelectDirective,
     BulmaModalComponent
   ],
@@ -68,10 +65,7 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
     BulmaInputDirective,
-    BulmaInputDirective,
     BulmaTextareaDirective,
-    BulmaTextareaDirective,
-    BulmaSelectDirective,
     BulmaSelectDirective,
     BulmaModalComponent
   ],
