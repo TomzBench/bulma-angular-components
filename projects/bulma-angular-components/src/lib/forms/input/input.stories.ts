@@ -101,6 +101,93 @@ export const twoIcons = () => ({
   `
 });
 
+export const horizontal = () => ({
+  template: `
+  <div b-field-horizontal="horizontal">
+    <div b-field
+      icon="envelope"
+      [loading]="true"
+      class="success"
+      help="First">
+      <input b-input type="input" placeholder="First"/>
+    </div>
+    <div b-field
+      icon="check"
+      class="info"
+      help="Second">
+      <input b-input type="input" placeholder="Second"/>
+    </div>
+    <div b-field
+      icon="user"
+      iconRight="key"
+      class="danger"
+      help="third">
+      <input b-input type="password" placeholder="Third"/>
+    </div>
+  </div>
+  `
+});
+
+export const smallHorizontal = () => ({
+  template: `
+  <div b-field-horizontal="horizontal" size="small">
+    <div b-field
+      size="small"
+      icon="envelope"
+      [loading]="true"
+      class="success"
+      help="First">
+      <input b-input type="input" placeholder="First"/>
+    </div>
+    <div b-field
+      size="small"
+      icon="check"
+      class="info"
+      help="Second">
+      <input b-input type="input" placeholder="Second"/>
+    </div>
+    <div b-field
+      size="small"
+      icon="user"
+      iconRight="key"
+      class="danger"
+      help="third">
+      <input b-input type="password" placeholder="Third"/>
+    </div>
+  </div>
+  `
+});
+
+export const wackoHorizontal = () => ({
+  template: `
+  <div b-field-horizontal="horizontal" size="small">
+    <div b-field
+      size="small"
+      icon="envelope"
+      [loading]="true"
+      class="success"
+      help="First">
+      <input b-input type="input" placeholder="First"/>
+    </div>
+    <div b-field
+      size="medium"
+      icon="check"
+      class="info"
+      help="Second">
+      <input b-input type="input" placeholder="Second"/>
+    </div>
+    <div b-field
+      size="large"
+      icon="user"
+      iconRight="key"
+      class="danger"
+      help="third">
+      <input b-input type="password" placeholder="Third"/>
+    </div>
+  </div>
+  `
+});
+
 export const raw = () => ({
   template: `
   <div class="field">

@@ -24,6 +24,7 @@ import {
 
 // Forms
 import { BulmaFieldComponent } from "./forms/field/field.component";
+import { BulmaFieldHorizontalComponent } from "./forms/field/field-horizontal.component";
 import { BulmaInputDirective } from "./forms/input/input.directive";
 import { BulmaSelectDirective } from "./forms/select/select.directive";
 import { BulmaTextareaDirective } from "./forms/textarea/textarea.directive";
@@ -47,6 +48,7 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
+    BulmaFieldHorizontalComponent,
     BulmaInputDirective,
     BulmaTextareaDirective,
     BulmaSelectDirective,
@@ -64,6 +66,7 @@ import { BulmaModalComponent } from "./modal/modal.component";
     BulmaTabsComponent,
     BulmaTabsItemViewComponent,
     BulmaFieldComponent,
+    BulmaFieldHorizontalComponent,
     BulmaInputDirective,
     BulmaTextareaDirective,
     BulmaSelectDirective,
