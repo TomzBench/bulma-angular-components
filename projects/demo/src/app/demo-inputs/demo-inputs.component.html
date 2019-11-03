@@ -1,55 +1,48 @@
 <!-- Regular -->
 <div class="column is-6">
   <h2 class="title">stacked regular</h2>
-  <div b-field="Name">
-    <input b-input [icon]="'user'" [iconRight]="'check'" [loading]="false" />
+  <div b-field="Name" icon="user" iconRight="check" [loading]="false">
+    <input b-input type="input" placeholder="standard" />
   </div>
-  <div b-field="Email">
-    <input b-input [icon]="'envelope'" [iconRight]="'check'" [loading]="true" />
+  <div b-field="Email" icon="envelope" iconRight="check" [loading]="true">
+    <input b-input type="input" placeholder="email@gmail.com" />
   </div>
-  <div b-field="Big">
-    <input
-      b-input
-      [icon]="'envelope'"
-      [class]="'success'"
-      [size]="'large'"
-      [help]="'Good job!'"
-      [iconRight]="'check'"
-      [loading]="true"
-    />
+  <div
+    b-field="Big"
+    icon="envelope"
+    class="success"
+    size="large"
+    help="good job!"
+    iconRight="check"
+    [loading]="true"
+  >
+    <input b-input type="input" placeholder="password" />
   </div>
-  <div b-field="Where">
-    <input b-input [icon]="'globe'" [iconRight]="'check'" [loading]="true" />
+  <div b-field="Where" icon="globe" iconRight="check" [loading]="true">
+    <input b-input type="input" />
   </div>
 </div>
 
 <!-- Horizontal -->
 <div class="column is-6">
   <h2 class="title">stacked horizontal</h2>
-  <div b-field="Name" [horizontal]="true">
-    <input
-      b-input
-      placeholder="Thomas"
-      [class]="'danger'"
-      [icon]="'user'"
-      [iconRight]="'check'"
-      [loading]="false"
-      [help]="'Your name is spelled wrong'"
-    />
-    <input
-      b-input
-      placeholder="thomas@altronix.com"
-      [icon]="'envelope'"
-      [iconRight]="'check'"
-      [loading]="false"
-    />
+  <div b-field-horizontal="Name">
+    <div
+      b-field
+      class="danger"
+      icon="user"
+      iconRight="check"
+      help="Your name is spelled wrong"
+    >
+      <input b-input type="input" placeholder="Thomas" />
+    </div>
+    <div b-field icon="envelope" iconRight="check">
+      <input b-input type="input" placeholder="thomas@altronix.com" />
+    </div>
   </div>
-  <div b-field="Location" [horizontal]="true">
-    <input
-      b-input
-      placeholder="Brooklyn, NY"
-      [icon]="'globe'"
-      [iconRight]="'check'"
-    />
+  <div b-field-horizontal="Location">
+    <div b-field icon="globe" iconRight="check">
+      <input b-input type="input" placeholder="Brooklyn, NY" />
+    </div>
   </div>
 </div>

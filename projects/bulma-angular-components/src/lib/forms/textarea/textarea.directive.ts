@@ -5,7 +5,7 @@ import {
   HostBinding,
   Input
 } from "@angular/core";
-import { BulmaFormBaseContext } from "../base";
+import { BulmaFormBaseContext, FormType } from "../base";
 
 @Directive({
   selector: "[b-textarea]",
@@ -21,11 +21,12 @@ export class BulmaTextareaDirective extends BulmaFormBaseContext
   constructor() {
     super();
   }
-  @HostBinding("class.input") hasClass: boolean = true;
-  @HostBinding("class") classes = "input";
+  @HostBinding("class.textarea") hasClass: boolean = true;
+  @HostBinding("class") classes = "textarea";
+  formType: FormType = "textarea";
 
   setClasses(classes: string) {
-    this.classes = classes + " input";
+    this.classes = classes + " textarea";
   }
 
   ngOnInit() {}

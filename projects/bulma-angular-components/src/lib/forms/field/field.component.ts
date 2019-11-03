@@ -9,7 +9,7 @@ import {
 } from "@angular/core";
 
 // import { BulmaInputDirective } from "../input/input.directive";
-import { BulmaFormBaseContext } from "../base";
+import { BulmaFormBaseContext, FormType } from "../base";
 
 export type SIZE = "small" | "large";
 export type CLASS = "info" | "danger" | "success";
@@ -32,6 +32,7 @@ export class BulmaFieldComponent implements OnInit, AfterContentInit {
   @Input() icon: string;
   @Input() iconRight: string;
   @Input() help: string;
+  formType: FormType;
 
   getSize() {
     return this.size ? `is-${this.size}` : "";
@@ -44,7 +45,8 @@ export class BulmaFieldComponent implements OnInit, AfterContentInit {
   ngOnInit() {}
 
   ngAfterContentInit() {
-    console.log(this.inputs);
+    this.formType = this.inputs.first.formType;
+    console.log(this.formType);
     this.inputs.toArray().forEach(input => {
       input.setClasses(this.getSize() + " " + this.getClass());
     });

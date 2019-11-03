@@ -5,7 +5,7 @@ import {
   HostBinding,
   Input
 } from "@angular/core";
-import { BulmaFormBaseContext } from "../base";
+import { BulmaFormBaseContext, FormType } from "../base";
 
 @Directive({
   selector: "[b-input]",
@@ -23,6 +23,7 @@ export class BulmaInputDirective extends BulmaFormBaseContext
   }
   @HostBinding("class.input") hasClass: boolean = true;
   @HostBinding("class") classes = "input";
+  formType: FormType = "input";
 
   setClasses(classes: string) {
     this.classes = classes + " input";

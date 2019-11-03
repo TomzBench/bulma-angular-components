@@ -4,12 +4,21 @@
 <div
   class="{{ 'control' + ' ' + getSize() + ' ' + getClass() }}"
   [ngClass]="{
-    'is-loading': loading,
+    'is-loading': loading && !(formType === 'select'),
     'has-icons-left': !!icon,
     'has-icons-right': loading || !!iconRight
   }"
 >
   <ng-content></ng-content>
+  <ng-content select="[b-input]"></ng-content>
+  <ng-content select="[b-textarea]"></ng-content>
+  <div
+    *ngIf="formType === 'select'"
+    class="{{ 'select ' + getSize() + ' ' + getClass() }}"
+    [ngClass]="{ 'is-loading': loading }"
+  >
+    <ng-content select="[b-select]"></ng-content>
+  </div>
   <span
     [ngClass]="getSize() + ' ' + getClass()"
     *ngIf="!!icon"

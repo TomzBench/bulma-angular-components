@@ -1,25 +1,21 @@
 <div class="column is-6">
-  <div b-field="Complaints">
-    <textarea b-textarea
-      placeholder="loading"
-      [loading]="true"></textarea>
+  <div b-field="Complaints" [loading]="true">
+    <textarea b-textarea placeholder="loading"></textarea>
   </div>
 </div>
 <div class="column is-6">
-  <div b-field="Complaints">
-    <textarea b-textarea
-      placeholder="Colors"
-      [class]="'success'"
-      [help]="'GoodJob!'"></textarea>
+  <div b-field="Complaints" class="success" help="Good Job!">
+    <textarea b-textarea placeholder="Colors"></textarea>
   </div>
 </div>
 <div class="column is-6">
-  <div b-field="Complaints">
-    <textarea b-textarea
-      placeholder="loading, large, has error"
-      [loading]="true"
-      [size]="'large'"
-      [class]="'danger'"
-      [help]="'To bad!'"></textarea>
+  <div
+    b-field="Complaints"
+    [loading]="true"
+    size="large"
+    class="danger"
+    help="To bad!"
+  >
+    <textarea b-textarea placeholder="loading, large, has error"></textarea>
   </div>
 </div>

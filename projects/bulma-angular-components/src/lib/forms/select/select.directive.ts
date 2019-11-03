@@ -5,7 +5,7 @@ import {
   HostBinding,
   Input
 } from "@angular/core";
-import { BulmaFormBaseContext } from "../base";
+import { BulmaFormBaseContext, FormType } from "../base";
 
 @Directive({
   selector: "[b-select]",
@@ -21,11 +21,12 @@ export class BulmaSelectDirective extends BulmaFormBaseContext
   constructor() {
     super();
   }
-  @HostBinding("class.input") hasClass: boolean = true;
-  @HostBinding("class") classes = "input";
+  @HostBinding("class") classes = "";
+  hasClass: boolean = false;
+  formType: FormType = "select";
 
   setClasses(classes: string) {
-    this.classes = classes + " input";
+    this.classes = classes + "";
   }
 
   ngOnInit() {}
