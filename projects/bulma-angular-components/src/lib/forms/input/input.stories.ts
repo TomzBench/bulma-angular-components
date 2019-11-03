@@ -160,7 +160,7 @@ export const smallHorizontal = () => ({
 
 export const wackoHorizontal = () => ({
   template: `
-  <div b-field-horizontal="horizontal" size="small">
+  <div b-field-horizontal="horizontal">
     <div b-field
       size="small"
       icon="envelope"

@@ -1,4 +1,4 @@
-<label *ngIf="label" class="label {{ size && 'is-' + size }}">
+<label *ngIf="label" class="{{ 'label ' + getSize() }}">
   {{ label }}
 </label>
 <div
